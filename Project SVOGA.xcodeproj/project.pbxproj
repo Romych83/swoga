@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C205A7F421B7092E006A8AD4 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F321B7092E006A8AD4 /* DateExtensions.swift */; };
+		C205A7F721B709F9006A8AD4 /* Data Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F521B709F9006A8AD4 /* Data Model.xcdatamodeld */; };
+		C205A7F921B71589006A8AD4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F821B71589006A8AD4 /* DataManager.swift */; };
+		C20BDE5721B7CDCE0053C11E /* DataElectricity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20BDE5621B7CDCE0053C11E /* DataElectricity.swift */; };
+		C20DB07D21B6EBAC00F871B4 /* GasStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DB07C21B6EBAC00F871B4 /* GasStatistics.swift */; };
+		C20DB07F21B6FDF100F871B4 /* WaterStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DB07E21B6FDF100F871B4 /* WaterStatistic.swift */; };
+		C20DB08121B6FE9C00F871B4 /* ElectricityStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DB08021B6FE9C00F871B4 /* ElectricityStatistic.swift */; };
+		C23191B021B2FB85007C6A68 /* ElectricityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23191AF21B2FB85007C6A68 /* ElectricityVC.swift */; };
+		C23191B221B2FB98007C6A68 /* WaterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23191B121B2FB98007C6A68 /* WaterVC.swift */; };
+		C23191B421B2FBA3007C6A68 /* GasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23191B321B2FBA3007C6A68 /* GasVC.swift */; };
+		C23191B621B2FBCA007C6A68 /* ElectricityStatisticVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23191B521B2FBCA007C6A68 /* ElectricityStatisticVC.swift */; };
+		C23191B821B2FBE2007C6A68 /* WaterStatisticVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23191B721B2FBE2007C6A68 /* WaterStatisticVC.swift */; };
+		C23191BA21B2FC58007C6A68 /* GasStatisticVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23191B921B2FC58007C6A68 /* GasStatisticVC.swift */; };
+		C23191BC21B2FDA3007C6A68 /* ConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23191BB21B2FDA3007C6A68 /* ConfigVC.swift */; };
+		C23FC7CA21B7BC98002B1663 /* DataWater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FC7C921B7BC98002B1663 /* DataWater.swift */; };
+		C2517E1021B563B60016B72E /* DataGas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2517E0F21B563B60016B72E /* DataGas.swift */; };
+		C29F602021B2F33D00C4F58B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F601F21B2F33D00C4F58B /* AppDelegate.swift */; };
+		C29F602221B2F33D00C4F58B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F602121B2F33D00C4F58B /* ViewController.swift */; };
+		C29F602521B2F33D00C4F58B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29F602321B2F33D00C4F58B /* Main.storyboard */; };
+		C29F602721B2F33D00C4F58B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C29F602621B2F33D00C4F58B /* Assets.xcassets */; };
+		C29F602A21B2F33D00C4F58B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29F602821B2F33D00C4F58B /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C205A7F321B7092E006A8AD4 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		C205A7F621B709F9006A8AD4 /* Data Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Data Model.xcdatamodel"; sourceTree = "<group>"; };
+		C205A7F821B71589006A8AD4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C20BDE5621B7CDCE0053C11E /* DataElectricity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataElectricity.swift; sourceTree = "<group>"; };
+		C20DB07C21B6EBAC00F871B4 /* GasStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStatistics.swift; sourceTree = "<group>"; };
+		C20DB07E21B6FDF100F871B4 /* WaterStatistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterStatistic.swift; sourceTree = "<group>"; };
+		C20DB08021B6FE9C00F871B4 /* ElectricityStatistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityStatistic.swift; sourceTree = "<group>"; };
+		C23191AF21B2FB85007C6A68 /* ElectricityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityVC.swift; sourceTree = "<group>"; };
+		C23191B121B2FB98007C6A68 /* WaterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterVC.swift; sourceTree = "<group>"; };
+		C23191B321B2FBA3007C6A68 /* GasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasVC.swift; sourceTree = "<group>"; };
+		C23191B521B2FBCA007C6A68 /* ElectricityStatisticVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityStatisticVC.swift; sourceTree = "<group>"; };
+		C23191B721B2FBE2007C6A68 /* WaterStatisticVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterStatisticVC.swift; sourceTree = "<group>"; };
+		C23191B921B2FC58007C6A68 /* GasStatisticVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStatisticVC.swift; sourceTree = "<group>"; };
+		C23191BB21B2FDA3007C6A68 /* ConfigVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigVC.swift; sourceTree = "<group>"; };
+		C23FC7C921B7BC98002B1663 /* DataWater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWater.swift; sourceTree = "<group>"; };
+		C2517E0F21B563B60016B72E /* DataGas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGas.swift; sourceTree = "<group>"; };
+		C29F601C21B2F33D00C4F58B /* Project SVOGA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project SVOGA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C29F601F21B2F33D00C4F58B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C29F602121B2F33D00C4F58B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C29F602421B2F33D00C4F58B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C29F602621B2F33D00C4F58B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C29F602921B2F33D00C4F58B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C29F602B21B2F33D00C4F58B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C29F601921B2F33D00C4F58B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C20AD64E21B7BF380023DE3D /* DATA */ = {
+			isa = PBXGroup;
+			children = (
+				C2517E0F21B563B60016B72E /* DataGas.swift */,
+				C20BDE5621B7CDCE0053C11E /* DataElectricity.swift */,
+				C23FC7C921B7BC98002B1663 /* DataWater.swift */,
+			);
+			name = DATA;
+			sourceTree = "<group>";
+		};
+		C20AD64F21B7BF790023DE3D /* StatisticVC */ = {
+			isa = PBXGroup;
+			children = (
+				C23191B521B2FBCA007C6A68 /* ElectricityStatisticVC.swift */,
+				C23191B721B2FBE2007C6A68 /* WaterStatisticVC.swift */,
+				C23191B921B2FC58007C6A68 /* GasStatisticVC.swift */,
+			);
+			name = StatisticVC;
+			sourceTree = "<group>";
+		};
+		C20AD65021B7BFC40023DE3D /* Struct Statist */ = {
+			isa = PBXGroup;
+			children = (
+				C20DB07E21B6FDF100F871B4 /* WaterStatistic.swift */,
+				C20DB07C21B6EBAC00F871B4 /* GasStatistics.swift */,
+				C20DB08021B6FE9C00F871B4 /* ElectricityStatistic.swift */,
+			);
+			name = "Struct Statist";
+			sourceTree = "<group>";
+		};
+		C20AD65121B7BFFA0023DE3D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				C23191AF21B2FB85007C6A68 /* ElectricityVC.swift */,
+				C23191B121B2FB98007C6A68 /* WaterVC.swift */,
+				C23191B321B2FBA3007C6A68 /* GasVC.swift */,
+				C23191BB21B2FDA3007C6A68 /* ConfigVC.swift */,
+				C29F602121B2F33D00C4F58B /* ViewController.swift */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		C29F601321B2F33D00C4F58B = {
+			isa = PBXGroup;
+			children = (
+				C29F601E21B2F33D00C4F58B /* Project SVOGA */,
+				C29F601D21B2F33D00C4F58B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C29F601D21B2F33D00C4F58B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C29F601C21B2F33D00C4F58B /* Project SVOGA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C29F601E21B2F33D00C4F58B /* Project SVOGA */ = {
+			isa = PBXGroup;
+			children = (
+				C29F601F21B2F33D00C4F58B /* AppDelegate.swift */,
+				C29F602321B2F33D00C4F58B /* Main.storyboard */,
+				C20AD64E21B7BF380023DE3D /* DATA */,
+				C205A7F321B7092E006A8AD4 /* DateExtensions.swift */,
+				C205A7F521B709F9006A8AD4 /* Data Model.xcdatamodeld */,
+				C205A7F821B71589006A8AD4 /* DataManager.swift */,
+				C20AD65021B7BFC40023DE3D /* Struct Statist */,
+				C20AD65121B7BFFA0023DE3D /* VC */,
+				C20AD64F21B7BF790023DE3D /* StatisticVC */,
+				C29F602621B2F33D00C4F58B /* Assets.xcassets */,
+				C29F602821B2F33D00C4F58B /* LaunchScreen.storyboard */,
+				C29F602B21B2F33D00C4F58B /* Info.plist */,
+			);
+			path = "Project SVOGA";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C29F601B21B2F33D00C4F58B /* Project SVOGA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C29F602E21B2F33D00C4F58B /* Build configuration list for PBXNativeTarget "Project SVOGA" */;
+			buildPhases = (
+				C29F601821B2F33D00C4F58B /* Sources */,
+				C29F601921B2F33D00C4F58B /* Frameworks */,
+				C29F601A21B2F33D00C4F58B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Project SVOGA";
+			productName = "Project SVOGA";
+			productReference = C29F601C21B2F33D00C4F58B /* Project SVOGA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C29F601421B2F33D00C4F58B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Romych;
+				TargetAttributes = {
+					C29F601B21B2F33D00C4F58B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C29F601721B2F33D00C4F58B /* Build configuration list for PBXProject "Project SVOGA" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C29F601321B2F33D00C4F58B;
+			productRefGroup = C29F601D21B2F33D00C4F58B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C29F601B21B2F33D00C4F58B /* Project SVOGA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C29F601A21B2F33D00C4F58B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C29F602A21B2F33D00C4F58B /* LaunchScreen.storyboard in Resources */,
+				C29F602721B2F33D00C4F58B /* Assets.xcassets in Resources */,
+				C29F602521B2F33D00C4F58B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C29F601821B2F33D00C4F58B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C205A7F721B709F9006A8AD4 /* Data Model.xcdatamodeld in Sources */,
+				C205A7F921B71589006A8AD4 /* DataManager.swift in Sources */,
+				C23191B221B2FB98007C6A68 /* WaterVC.swift in Sources */,
+				C20BDE5721B7CDCE0053C11E /* DataElectricity.swift in Sources */,
+				C29F602221B2F33D00C4F58B /* ViewController.swift in Sources */,
+				C23FC7CA21B7BC98002B1663 /* DataWater.swift in Sources */,
+				C20DB07F21B6FDF100F871B4 /* WaterStatistic.swift in Sources */,
+				C23191B821B2FBE2007C6A68 /* WaterStatisticVC.swift in Sources */,
+				C2517E1021B563B60016B72E /* DataGas.swift in Sources */,
+				C23191BA21B2FC58007C6A68 /* GasStatisticVC.swift in Sources */,
+				C20DB08121B6FE9C00F871B4 /* ElectricityStatistic.swift in Sources */,
+				C205A7F421B7092E006A8AD4 /* DateExtensions.swift in Sources */,
+				C23191B421B2FBA3007C6A68 /* GasVC.swift in Sources */,
+				C23191BC21B2FDA3007C6A68 /* ConfigVC.swift in Sources */,
+				C20DB07D21B6EBAC00F871B4 /* GasStatistics.swift in Sources */,
+				C23191B021B2FB85007C6A68 /* ElectricityVC.swift in Sources */,
+				C29F602021B2F33D00C4F58B /* AppDelegate.swift in Sources */,
+				C23191B621B2FBCA007C6A68 /* ElectricityStatisticVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C29F602321B2F33D00C4F58B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C29F602421B2F33D00C4F58B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C29F602821B2F33D00C4F58B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C29F602921B2F33D00C4F58B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C29F602C21B2F33D00C4F58B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C29F602D21B2F33D00C4F58B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C29F602F21B2F33D00C4F58B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9WXR7P286;
+				INFOPLIST_FILE = "Project SVOGA/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "RST.Project-SVOGA";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C29F603021B2F33D00C4F58B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9WXR7P286;
+				INFOPLIST_FILE = "Project SVOGA/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "RST.Project-SVOGA";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C29F601721B2F33D00C4F58B /* Build configuration list for PBXProject "Project SVOGA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C29F602C21B2F33D00C4F58B /* Debug */,
+				C29F602D21B2F33D00C4F58B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C29F602E21B2F33D00C4F58B /* Build configuration list for PBXNativeTarget "Project SVOGA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C29F602F21B2F33D00C4F58B /* Debug */,
+				C29F603021B2F33D00C4F58B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C205A7F521B709F9006A8AD4 /* Data Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C205A7F621B709F9006A8AD4 /* Data Model.xcdatamodel */,
+			);
+			currentVersion = C205A7F621B709F9006A8AD4 /* Data Model.xcdatamodel */;
+			path = "Data Model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C29F601421B2F33D00C4F58B /* Project object */;
+}

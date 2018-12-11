@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GU9-vi-okN">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--statistic-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_SVOGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mainBackground" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-y2-JIt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1167386569415082" green="0.76979352874947249" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="statistic" image="icons8-statistics" id="qvs-x7-aiA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440.57971014492756" y="132.88043478260872"/>
+        </scene>
+        <!--ElectricityVC-->
+        <scene sceneID="SqM-yP-fkT">
+            <objects>
+                <viewController id="oGa-b5-2KV" customClass="ElectricityVC" customModule="Project_SVOGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GgE-G7-VVY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="2uF-um-IA6"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="SaI-pN-8kA">
+                        <barButtonItem key="rightBarButtonItem" title="Data" id="dLm-UA-jbf">
+                            <connections>
+                                <segue destination="sZD-yw-qRO" kind="show" id="fpP-Rn-wU4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ltc-rf-PaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179" y="1030"/>
+        </scene>
+        <!--Electricity StatisticVC-->
+        <scene sceneID="Qpp-Ra-bG7">
+            <objects>
+                <viewController id="sZD-yw-qRO" customClass="ElectricityStatisticVC" customModule="Project_SVOGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iaf-C3-lXO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="electrBackground" translatesAutoresizingMaskIntoConstraints="NO" id="wbL-ay-VrT">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pw-wC-Ec1">
+                                <rect key="frame" x="189" y="138" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="buttonPressed" destination="sZD-yw-qRO" eventType="touchUpInside" id="ALn-Ve-q90"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter data" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fh8-wc-F4C">
+                                <rect key="frame" x="43" y="138" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="You result" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t1A-25-4oc">
+                                <rect key="frame" x="43" y="189" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8877997526773187" green="1" blue="0.96991078282802856" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="w9v-Ee-cVz"/>
+                    </view>
+                    <connections>
+                        <outlet property="enteredNumbers" destination="fh8-wc-F4C" id="C5I-zD-bDV"/>
+                        <outlet property="resultText" destination="t1A-25-4oc" id="tnR-sq-GsA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vmT-9Z-jJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1131.8840579710145" y="1793.4782608695652"/>
+        </scene>
+        <!--Water StatisticVC-->
+        <scene sceneID="0UC-mG-MYh">
+            <objects>
+                <viewController id="Hwj-7j-TK5" customClass="WaterStatisticVC" customModule="Project_SVOGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lbU-PZ-V5J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waterBackground" translatesAutoresizingMaskIntoConstraints="NO" id="XOh-HQ-0Id">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fh2-qW-1s4">
+                                <rect key="frame" x="189" y="138" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="buttonPressed" destination="Hwj-7j-TK5" eventType="touchUpInside" id="MaQ-Kw-hFL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter data" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SaG-2f-gVu">
+                                <rect key="frame" x="43" y="138" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="You result" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eSn-VO-Prg">
+                                <rect key="frame" x="43" y="189" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70305350142676382" green="1" blue="0.71007483460018639" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Q50-lX-AYv"/>
+                    </view>
+                    <connections>
+                        <outlet property="enteredNumbers" destination="SaG-2f-gVu" id="lQ5-Qd-Oho"/>
+                        <outlet property="resultText" destination="eSn-VO-Prg" id="Ytt-OS-Rfl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGs-go-vFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921.7391304347827" y="1793.4782608695652"/>
+        </scene>
+        <!--Gas StatisticVC-->
+        <scene sceneID="ihy-Uj-Olw">
+            <objects>
+                <viewController id="CpV-Yg-tkn" customClass="GasStatisticVC" customModule="Project_SVOGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zJo-fm-U2W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gasBackground" translatesAutoresizingMaskIntoConstraints="NO" id="bBU-p2-c4g">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79d-b5-LLq">
+                                <rect key="frame" x="189" y="138" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41132502688117523" green="0.66670961952347263" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed" destination="CpV-Yg-tkn" eventType="touchUpInside" id="c82-OB-gOA"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter data" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sIe-cn-R78">
+                                <rect key="frame" x="49" y="139" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="You result" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibz-up-vaY">
+                                <rect key="frame" x="49" y="201" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.92616256468454883" blue="0.66958057704510798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="hFB-wN-kVY"/>
+                    </view>
+                    <connections>
+                        <outlet property="enteredNumbers" destination="sIe-cn-R78" id="SWu-Wg-hwz"/>
+                        <outlet property="resultText" destination="ibz-up-vaY" id="ftb-W3-67s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uv2-V0-qIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2728.985507246377" y="1793.4782608695652"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6va-Uv-lwy">
+            <objects>
+                <tabBarController id="GU9-vi-okN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="P2I-Ym-lHr"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RT8-zq-lLi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="cin-jN-Jp8"/>
+                        <segue destination="NPZ-DH-AIu" kind="relationship" relationship="viewControllers" id="CVs-7i-TPt"/>
+                        <segue destination="i0g-Sd-p9U" kind="relationship" relationship="viewControllers" id="ne5-U2-twc"/>
+                        <segue destination="3Pq-1f-XOi" kind="relationship" relationship="viewControllers" id="s45-tD-yzd"/>
+                        <segue destination="v0L-ZU-gZb" kind="relationship" relationship="viewControllers" id="wYx-sD-JJ8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ks-zB-wCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="-745"/>
+        </scene>
+        <!--WaterVC-->
+        <scene sceneID="ndc-kB-he1">
+            <objects>
+                <viewController id="cfd-1i-Lbw" customClass="WaterVC" customModule="Project_SVOGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="top" id="x9q-1k-Clr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.76576421994075505" green="1" blue="0.7500134698667914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="wRf-kJ-K4D"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="99g-Mc-Mda">
+                        <barButtonItem key="rightBarButtonItem" title="Data" springLoaded="YES" style="plain" id="Za3-hS-Iko">
+                            <connections>
+                                <segue destination="Hwj-7j-TK5" kind="show" id="h4C-zb-ju8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLx-yE-jA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924" y="1030"/>
+        </scene>
+        <!--GasVC-->
+        <scene sceneID="VaC-k1-kqZ">
+            <objects>
+                <viewController id="GzD-i3-yoy" customClass="GasVC" customModule="Project_SVOGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eXj-mL-V6W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.8706062335889293" blue="0.62041131618263667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="nTo-Kx-TMP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="m5O-0V-K1m">
+                        <barButtonItem key="rightBarButtonItem" title="Data" id="9ag-i0-Nvz">
+                            <connections>
+                                <segue destination="CpV-Yg-tkn" kind="show" id="IDJ-zg-DwU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBV-EW-w2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2730" y="1045"/>
+        </scene>
+        <!--Config-->
+        <scene sceneID="PaX-5e-3aI">
+            <objects>
+                <viewController id="v0L-ZU-gZb" customClass="ConfigVC" customModule="Project_SVOGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qdO-wx-Ry3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGy-vy-ZTT">
+                                <rect key="frame" x="126" y="328" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61161459918401717" green="0.60000150703558586" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ljx-aq-JWW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Config" image="icons8-gears" id="6MB-eB-GWj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cs8-5M-IbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3651" y="240"/>
+        </scene>
+        <!--Electricity-->
+        <scene sceneID="vjO-f2-9k5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NPZ-DH-AIu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Electricity" image="icons8-electrical" id="LTW-5F-eNU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iiB-de-86P">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oGa-b5-2KV" kind="relationship" relationship="rootViewController" id="1Gb-tI-Guu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Syl-IV-tBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181" y="240"/>
+        </scene>
+        <!--Water-->
+        <scene sceneID="IG5-Ur-yrd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i0g-Sd-p9U" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Water" image="icons8-water" id="ZDi-tu-qG8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UEm-Nv-jWl">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cfd-1i-Lbw" kind="relationship" relationship="rootViewController" id="cuI-2n-ORt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtU-mU-sxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1922" y="240"/>
+        </scene>
+        <!--Gas-->
+        <scene sceneID="wZz-T5-M2q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Pq-1f-XOi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Gas" image="icons8-gas" id="bGE-dF-B85"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aUn-Nj-XId">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GzD-i3-yoy" kind="relationship" relationship="rootViewController" id="eTJ-Ut-89Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ec-E2-5sP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2730" y="240"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="electrBackground" width="2000" height="1100"/>
+        <image name="gasBackground" width="311" height="162"/>
+        <image name="icons8-electrical" width="25" height="25"/>
+        <image name="icons8-gas" width="25" height="25"/>
+        <image name="icons8-gears" width="25" height="25"/>
+        <image name="icons8-statistics" width="25" height="25"/>
+        <image name="icons8-water" width="25" height="25"/>
+        <image name="mainBackground" width="400" height="280"/>
+        <image name="waterBackground" width="259" height="194"/>
+    </resources>
+</document>
