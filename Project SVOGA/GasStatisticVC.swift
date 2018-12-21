@@ -16,25 +16,21 @@ class GasStatisticVC: UIViewController {
     @IBOutlet weak var resultText: UITextField!
     
     @IBAction func buttonPressed() {
-        var gass = Float()
+        
         if let enteredText = enteredNumbers.text, let enterNum = Float(enteredText) {
-            gass = Float(enterNum)
-            let gas = DataGas(gasReadings: gass, costGasForOneM3: 8.5)
+            
+            let gas = DataGas(gasReadings: enterNum, costGasForOneM3: 8.5)
             let gasForDay = GasStatistics(gas: gas.resultForReading, date: .init())
             print(gasForDay)
             resultText.text = String(gas.resultForReading)
             self.gass.saveGas(data: resultText.text!)
-            
-            
         } else {
             resultText.text = "Enter valid data!"
         }
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         print(gass.context)
     }
-    
 }
 
