@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C205A7F421B7092E006A8AD4 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F321B7092E006A8AD4 /* DateExtensions.swift */; };
-		C205A7F721B709F9006A8AD4 /* Data Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F521B709F9006A8AD4 /* Data Model.xcdatamodeld */; };
+		C205A7F721B709F9006A8AD4 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F521B709F9006A8AD4 /* DataModel.xcdatamodeld */; };
 		C205A7F921B71589006A8AD4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F821B71589006A8AD4 /* DataManager.swift */; };
 		C20BDE5721B7CDCE0053C11E /* DataElectricity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20BDE5621B7CDCE0053C11E /* DataElectricity.swift */; };
 		C20DB07D21B6EBAC00F871B4 /* GasStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DB07C21B6EBAC00F871B4 /* GasStatistics.swift */; };
@@ -132,7 +132,7 @@
 				C29F602321B2F33D00C4F58B /* Main.storyboard */,
 				C20AD64E21B7BF380023DE3D /* DATA */,
 				C205A7F321B7092E006A8AD4 /* DateExtensions.swift */,
-				C205A7F521B709F9006A8AD4 /* Data Model.xcdatamodeld */,
+				C205A7F521B709F9006A8AD4 /* DataModel.xcdatamodeld */,
 				C205A7F821B71589006A8AD4 /* DataManager.swift */,
 				C20AD65021B7BFC40023DE3D /* Struct Statist */,
 				C20AD65121B7BFFA0023DE3D /* VC */,
@@ -216,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C205A7F721B709F9006A8AD4 /* Data Model.xcdatamodeld in Sources */,
+				C205A7F721B709F9006A8AD4 /* DataModel.xcdatamodeld in Sources */,
 				C205A7F921B71589006A8AD4 /* DataManager.swift in Sources */,
 				C23191B221B2FB98007C6A68 /* WaterVC.swift in Sources */,
 				C20BDE5721B7CDCE0053C11E /* DataElectricity.swift in Sources */,
@@ -420,13 +420,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C205A7F521B709F9006A8AD4 /* Data Model.xcdatamodeld */ = {
+		C205A7F521B709F9006A8AD4 /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				C205A7F621B709F9006A8AD4 /* Data Model.xcdatamodel */,
 			);
 			currentVersion = C205A7F621B709F9006A8AD4 /* Data Model.xcdatamodel */;
-			path = "Data Model.xcdatamodeld";
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

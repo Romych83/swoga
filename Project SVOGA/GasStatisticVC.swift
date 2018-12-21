@@ -9,6 +9,7 @@
 import UIKit
 
 class GasStatisticVC: UIViewController {
+    let gass = DataManager()
     
     @IBOutlet weak var enteredNumbers: UITextField!
     
@@ -22,9 +23,18 @@ class GasStatisticVC: UIViewController {
             let gasForDay = GasStatistics(gas: gas.resultForReading, date: .init())
             print(gasForDay)
             resultText.text = String(gas.resultForReading)
+            self.gass.saveGas(data: resultText.text!)
+            
+            
         } else {
             resultText.text = "Enter valid data!"
         }
+        
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(gass.context)
+    }
+    
 }
 

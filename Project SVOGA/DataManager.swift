@@ -21,7 +21,9 @@ final class DataManager {
         
         let request = try! context.fetch(userFetch)
         let gas: GasStatistics = request.first as! GasStatistics
+        print(gas)
         return gas
+        
     }
     
     func saveGas(data: String) {
