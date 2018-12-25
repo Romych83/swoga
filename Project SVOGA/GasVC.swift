@@ -17,8 +17,9 @@ class GasVC: UIViewController, ChartViewDelegate {
     let gas = DataManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       //gas.DeleteAllData()
        setCgartData(pokaz: gas.getGas())
+        lineChartView.reloadInputViews()
     }
     
     func setCgartData(pokaz: [Float]) {
@@ -36,7 +37,7 @@ class GasVC: UIViewController, ChartViewDelegate {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        gas.getGas()
+     //   gas.getGas()
        // print(gas.getGas().gas)
     }
     

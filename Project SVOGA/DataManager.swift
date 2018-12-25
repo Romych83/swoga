@@ -19,18 +19,30 @@ final class DataManager {
         //userFetch.fetchLimit = 5
         //userFetch.fetchBatchSize = 5
         userFetch.sortDescriptors = [NSSortDescriptor.init(key: "gas", ascending: true)]
-        
+        userFetch.sortDescriptors = [NSSortDescriptor.init(key: "date", ascending: true)]
         let request = try! context.fetch(userFetch)
         var masive = [Float]()
-        
+        var arrayDate = [Date]()
         //let gas: GasDataModel = request.last as! GasDataModel
         for data in request as! [NSManagedObject] {
             //print(data.value(forKey: "gas") as! Float)
             masive.append(data.value(forKey: "gas") as! Float)
+           // arrayDate.append(data.value(forKey: "date") as! Date)
+          //  print(data)
         }
-         let newArray = masive.suffix(5)
-        masive = Array(newArray)
-        print(masive)
+         let newMasive = masive.suffix(5)
+        masive = Array(newMasive)
+        
+        for date in request as! [NSManagedObject] {
+            //print(data.value(forKey: "gas") as! Float)
+            arrayDate.append(date.value(forKey: "date") as! Date)
+            // arrayDate.append(data.value(forKey: "date") as! Date)
+            //  print(data)
+        }
+        
+        let newAarry = arrayDate.suffix(5)
+        arrayDate = Array(newAarry)
+       // print(masive)
         return masive
     }
     
@@ -40,7 +52,9 @@ final class DataManager {
         let gasRead = NSManagedObject(entity: gasEntity, insertInto: context)
         
         gasRead.setValue(Float(data), forKeyPath: "gas")
-        print("some =",gasRead)
+        gasRead.setValue(date.shortString, forKeyPath: "date")
+      //  print("some =",gasRead)
+        
         do {
             try context.save()
             
@@ -48,19 +62,18 @@ final class DataManager {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
-    func deleteAllData(_ entity:String) {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
-        fetchRequest.returnsObjectsAsFaults = false
+    func DeleteAllData(){
+        
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let DelAllReqVar = NSBatchDeleteRequest(fetchRequest: NSFetchRequest<NSFetchRequestResult>(entityName: "GasDataModel"))
         do {
-            let results = try context.viewContext.fetch(fetchRequest)
-            for object in results {
-                guard let objectData = object as? NSManagedObject else {continue}
-                dataController.viewContext.delete(objectData)
-            }
-        } catch let error {
-            print("Detele all data in \(entity) error :", error)
+            try managedContext.execute(DelAllReqVar)
+        }
+        catch {
+            print(error)
         }
     }
-    
     
 }

@@ -256,22 +256,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDT-yW-kRs" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="15" y="74" width="384" height="319"/>
+                                <rect key="frame" x="15" y="74" width="384" height="465"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8706062335889293" blue="0.62041131618263667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nTo-Kx-TMP" firstAttribute="trailing" secondItem="vDT-yW-kRs" secondAttribute="trailing" constant="15" id="5Y8-Y3-m1X"/>
-                            <constraint firstItem="vDT-yW-kRs" firstAttribute="leading" secondItem="nTo-Kx-TMP" secondAttribute="leading" constant="15" id="BZW-7g-l4J"/>
-                            <constraint firstItem="vDT-yW-kRs" firstAttribute="top" secondItem="nTo-Kx-TMP" secondAttribute="top" constant="10" id="Ct8-W0-jId"/>
-                            <constraint firstItem="vDT-yW-kRs" firstAttribute="leading" secondItem="nTo-Kx-TMP" secondAttribute="leading" constant="15" id="Hgo-Je-8Zr"/>
-                            <constraint firstItem="vDT-yW-kRs" firstAttribute="leading" secondItem="nTo-Kx-TMP" secondAttribute="leading" constant="15" id="IuI-g7-NVe"/>
-                            <constraint firstItem="nTo-Kx-TMP" firstAttribute="trailing" secondItem="vDT-yW-kRs" secondAttribute="trailing" constant="15" id="T7u-W9-dJM"/>
-                            <constraint firstItem="vDT-yW-kRs" firstAttribute="top" secondItem="nTo-Kx-TMP" secondAttribute="top" constant="10" id="X5c-Ja-h05"/>
-                            <constraint firstItem="nTo-Kx-TMP" firstAttribute="trailing" secondItem="vDT-yW-kRs" secondAttribute="trailing" constant="15" id="j9U-3W-HNh"/>
-                            <constraint firstItem="nTo-Kx-TMP" firstAttribute="bottom" secondItem="vDT-yW-kRs" secondAttribute="bottom" constant="294" id="pAd-0e-w2l"/>
-                            <constraint firstItem="vDT-yW-kRs" firstAttribute="top" secondItem="nTo-Kx-TMP" secondAttribute="top" constant="10" id="yww-2e-jlM"/>
+                            <constraint firstItem="vDT-yW-kRs" firstAttribute="leading" secondItem="nTo-Kx-TMP" secondAttribute="leading" constant="15" id="19Z-dd-Zj0"/>
+                            <constraint firstItem="nTo-Kx-TMP" firstAttribute="trailing" secondItem="vDT-yW-kRs" secondAttribute="trailing" constant="15" id="m5A-Ir-9qp"/>
+                            <constraint firstItem="nTo-Kx-TMP" firstAttribute="bottom" secondItem="vDT-yW-kRs" secondAttribute="bottom" constant="148" id="qHt-p2-mz0"/>
+                            <constraint firstItem="vDT-yW-kRs" firstAttribute="top" secondItem="nTo-Kx-TMP" secondAttribute="top" constant="10" id="vNw-X8-m8y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nTo-Kx-TMP"/>
                     </view>
