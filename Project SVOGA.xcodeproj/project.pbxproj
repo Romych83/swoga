@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AFF456550F6430792FD91031 /* libPods-Project SVOGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59DD272F7380F906C70F11C7 /* libPods-Project SVOGA.a */; };
 		C205A7F421B7092E006A8AD4 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F321B7092E006A8AD4 /* DateExtensions.swift */; };
 		C205A7F721B709F9006A8AD4 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F521B709F9006A8AD4 /* DataModel.xcdatamodeld */; };
 		C205A7F921B71589006A8AD4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F821B71589006A8AD4 /* DataManager.swift */; };
@@ -31,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000D0CE7647F1522237E572C /* Pods-Project SVOGA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project SVOGA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project SVOGA/Pods-Project SVOGA.debug.xcconfig"; sourceTree = "<group>"; };
+		59DD272F7380F906C70F11C7 /* libPods-Project SVOGA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project SVOGA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EEE65DF56C7E74120E8E709 /* Pods-Project SVOGA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project SVOGA.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project SVOGA/Pods-Project SVOGA.release.xcconfig"; sourceTree = "<group>"; };
 		C205A7F321B7092E006A8AD4 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		C205A7F621B709F9006A8AD4 /* Data Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Data Model.xcdatamodel"; sourceTree = "<group>"; };
 		C205A7F821B71589006A8AD4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -61,12 +65,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF456550F6430792FD91031 /* libPods-Project SVOGA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8ACE436892562913C832097A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				000D0CE7647F1522237E572C /* Pods-Project SVOGA.debug.xcconfig */,
+				7EEE65DF56C7E74120E8E709 /* Pods-Project SVOGA.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C20AD64E21B7BF380023DE3D /* DATA */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +128,8 @@
 			children = (
 				C29F601E21B2F33D00C4F58B /* Project SVOGA */,
 				C29F601D21B2F33D00C4F58B /* Products */,
+				8ACE436892562913C832097A /* Pods */,
+				CD1671ACC51A49B9C264B323 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +160,14 @@
 			path = "Project SVOGA";
 			sourceTree = "<group>";
 		};
+		CD1671ACC51A49B9C264B323 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59DD272F7380F906C70F11C7 /* libPods-Project SVOGA.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C29F602E21B2F33D00C4F58B /* Build configuration list for PBXNativeTarget "Project SVOGA" */;
 			buildPhases = (
+				F04A76E5C66611910099A27F /* [CP] Check Pods Manifest.lock */,
 				C29F601821B2F33D00C4F58B /* Sources */,
 				C29F601921B2F33D00C4F58B /* Frameworks */,
 				C29F601A21B2F33D00C4F58B /* Resources */,
@@ -210,6 +235,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F04A76E5C66611910099A27F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Project SVOGA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C29F601821B2F33D00C4F58B /* Sources */ = {
@@ -368,6 +418,7 @@
 		};
 		C29F602F21B2F33D00C4F58B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000D0CE7647F1522237E572C /* Pods-Project SVOGA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -383,6 +434,7 @@
 		};
 		C29F603021B2F33D00C4F58B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EEE65DF56C7E74120E8E709 /* Pods-Project SVOGA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

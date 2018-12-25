@@ -7,18 +7,37 @@
 //
 
 import UIKit
-
-class GasVC: UIViewController {
-
+import Charts
+class GasVC: UIViewController, ChartViewDelegate {
+    
+    @IBOutlet weak var lineChartView: LineChartView!
+    
+    
+    
+    let gas = DataManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       
+       setCgartData(pokaz: gas.getGas())
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setCgartData(pokaz: [Float]) {
+        var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
+        for i in 0 ..< pokaz.count {
+            yVals1.append(ChartDataEntry(x: Double(pokaz[i]), y: Double(i)))
+        }
+        
+        let set1 = LineChartDataSet(values: yVals1, label: "some")
+        let data = LineChartData(dataSet: set1)
+        
+        self.lineChartView.data = data
+    }
+    
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        gas.getGas()
+       // print(gas.getGas().gas)
     }
     
 

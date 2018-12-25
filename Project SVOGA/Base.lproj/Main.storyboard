@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GU9-vi-okN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GU9-vi-okN">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -254,7 +254,25 @@
                     <view key="view" contentMode="scaleToFill" id="eXj-mL-V6W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDT-yW-kRs" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="15" y="74" width="384" height="319"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.8706062335889293" blue="0.62041131618263667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nTo-Kx-TMP" firstAttribute="trailing" secondItem="vDT-yW-kRs" secondAttribute="trailing" constant="15" id="5Y8-Y3-m1X"/>
+                            <constraint firstItem="vDT-yW-kRs" firstAttribute="leading" secondItem="nTo-Kx-TMP" secondAttribute="leading" constant="15" id="BZW-7g-l4J"/>
+                            <constraint firstItem="vDT-yW-kRs" firstAttribute="top" secondItem="nTo-Kx-TMP" secondAttribute="top" constant="10" id="Ct8-W0-jId"/>
+                            <constraint firstItem="vDT-yW-kRs" firstAttribute="leading" secondItem="nTo-Kx-TMP" secondAttribute="leading" constant="15" id="Hgo-Je-8Zr"/>
+                            <constraint firstItem="vDT-yW-kRs" firstAttribute="leading" secondItem="nTo-Kx-TMP" secondAttribute="leading" constant="15" id="IuI-g7-NVe"/>
+                            <constraint firstItem="nTo-Kx-TMP" firstAttribute="trailing" secondItem="vDT-yW-kRs" secondAttribute="trailing" constant="15" id="T7u-W9-dJM"/>
+                            <constraint firstItem="vDT-yW-kRs" firstAttribute="top" secondItem="nTo-Kx-TMP" secondAttribute="top" constant="10" id="X5c-Ja-h05"/>
+                            <constraint firstItem="nTo-Kx-TMP" firstAttribute="trailing" secondItem="vDT-yW-kRs" secondAttribute="trailing" constant="15" id="j9U-3W-HNh"/>
+                            <constraint firstItem="nTo-Kx-TMP" firstAttribute="bottom" secondItem="vDT-yW-kRs" secondAttribute="bottom" constant="294" id="pAd-0e-w2l"/>
+                            <constraint firstItem="vDT-yW-kRs" firstAttribute="top" secondItem="nTo-Kx-TMP" secondAttribute="top" constant="10" id="yww-2e-jlM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nTo-Kx-TMP"/>
                     </view>
                     <navigationItem key="navigationItem" id="m5O-0V-K1m">
@@ -264,10 +282,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lineChartView" destination="vDT-yW-kRs" id="z1G-2q-KMF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBV-EW-w2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2730" y="1045"/>
+            <point key="canvasLocation" x="2728.985507246377" y="1044.2934782608697"/>
         </scene>
         <!--Config-->
         <scene sceneID="PaX-5e-3aI">
@@ -353,11 +374,11 @@
     <resources>
         <image name="electrBackground" width="2000" height="1100"/>
         <image name="gasBackground" width="311" height="162"/>
-        <image name="icons8-electrical" width="25" height="25"/>
-        <image name="icons8-gas" width="25" height="25"/>
-        <image name="icons8-gears" width="25" height="25"/>
-        <image name="icons8-statistics" width="25" height="25"/>
-        <image name="icons8-water" width="25" height="25"/>
+        <image name="icons8-electrical" width="75" height="75"/>
+        <image name="icons8-gas" width="75" height="75"/>
+        <image name="icons8-gears" width="75" height="75"/>
+        <image name="icons8-statistics" width="75" height="75"/>
+        <image name="icons8-water" width="75" height="75"/>
         <image name="mainBackground" width="400" height="280"/>
         <image name="waterBackground" width="259" height="194"/>
     </resources>
