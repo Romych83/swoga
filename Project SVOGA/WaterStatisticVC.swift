@@ -22,6 +22,8 @@ class WaterStatisticVC: UIViewController {
             let waterForDay = WaterStatistics(water: water.resultForReading, date: .init())
             print(waterForDay)
             resultText.text = String(water.resultForReading)
+        reloadInputViews()
+            
         } else {
             resultText.text = "Enter valid data!"
         }

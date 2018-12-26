@@ -25,13 +25,14 @@ class GasStatisticVC: UIViewController {
             //print(gasForDay)
             resultText.text = String(gas.resultForReading)
            self.gass.saveGas(data: resultText.text!, date: Date.init())
-            
+            reloadInputViews()
         } else {
             resultText.text = "Enter valid data!"
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        reloadInputViews()
 //print(gass.context)
     }
 }

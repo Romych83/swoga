@@ -13,7 +13,7 @@ extension Date {
     // return string from date in format "dd.MM.YYYY"
     var shortString: String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.YYYY"
+        dateFormatter.dateFormat = "dd.MM"
         return dateFormatter.string(from: self)
     }
     

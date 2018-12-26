@@ -17,17 +17,16 @@ final class DataManager {
 
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "GasDataModel")
         //userFetch.fetchLimit = 5
-        //userFetch.fetchBatchSize = 5
-        userFetch.sortDescriptors = [NSSortDescriptor.init(key: "gas", ascending: true)]
-      //  userFetch.sortDescriptors = [NSSortDescriptor.init(key: "date", ascending: true)]
+        
         let request = try! context.fetch(userFetch)
         var masive = [Float]()
-        //let gas: GasDataModel = request.last as! GasDataModel
+        
         for data in request as! [NSManagedObject] {
-            //print(data.value(forKey: "gas") as! Float)
+            
             masive.append(data.value(forKey: "gas") as! Float)
         }
-         let newMasive = masive.suffix(5)
+         let newMasive = masive
+        print("saasaasas=", newMasive)
         masive = Array(newMasive)
         return masive
     }
@@ -36,21 +35,20 @@ final class DataManager {
         
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "GasDataModel")
         //userFetch.fetchLimit = 5
-        //userFetch.fetchBatchSize = 5
-       // userFetch.sortDescriptors = [NSSortDescriptor.init(key: "gas", ascending: true)]
-        userFetch.sortDescriptors = [NSSortDescriptor.init(key: "date", ascending: true)]
+       
+        
         let request = try! context.fetch(userFetch)
         var masive = [String]()
-        //let gas: GasDataModel = request.last as! GasDataModel
+        
         for data in request as! [NSManagedObject] {
-            //print(data.value(forKey: "gas") as! Float)
+            
             let someData = data.value(forKey: "date") as! Date
-           //print( someData.shortString)
+           
             masive.append(someData.shortString)
             
-         //   masive.append(data.value(forKey: "date") as! String)
+         
         }
-        let newMasive = masive.suffix(5)
+        let newMasive = masive
         masive = Array(newMasive)
         return masive
     }
