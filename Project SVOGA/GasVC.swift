@@ -18,19 +18,19 @@ class GasVC: UIViewController, ChartViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
        //gas.DeleteAllData()
-       setCgartData(pokaz: gas.getGas())
+       setCgartData(pokaz: gas.getGas(), date: gas.getDate())
         lineChartView.reloadInputViews()
     }
     
-    func setCgartData(pokaz: [Float]) {
+    func setCgartData(pokaz: [Float], date: [String]) {
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         for i in 0 ..< pokaz.count {
-            yVals1.append(ChartDataEntry(x: Double(pokaz[i]), y: Double(i)))
+            yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
+//            lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: <#T##[String]#>)
         }
         
         let set1 = LineChartDataSet(values: yVals1, label: "some")
         let data = LineChartData(dataSet: set1)
-        
         self.lineChartView.data = data
     }
     
@@ -38,18 +38,9 @@ class GasVC: UIViewController, ChartViewDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
      //   gas.getGas()
-       // print(gas.getGas().gas)
+        print(gas.getGas())
+        print(gas.getDate())
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
