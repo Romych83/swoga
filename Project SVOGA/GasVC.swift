@@ -11,33 +11,22 @@ import Charts
 class GasVC: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var lineChartView: LineChartView!
-    let gas = DataManager()
+    let gas = DataManagerGas()
     
-    override func viewWillAppear(_ animated: Bool) {
-        reloadInputViews()
-    
-    }
-     
     override func viewDidLoad() {
         super.viewDidLoad()
-      // gas.DeleteAllData()
-       setCgartData(pokaz: gas.getGas(), date: gas.getDate())
-        self.title = "Line"
-        lineChartView.backgroundColor = UIColor.cyan
-    
+        // gas.DeleteAllDataGas()
+        setChartData(pokaz: gas.getGas(), date: gas.getDate())
     }
     
-    func setCgartData(pokaz: [Float], date: [String]) {
+    func setChartData(pokaz: [Float], date: [String]) {
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
-       lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:date)
-        
+        lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:date)
         for i in 0 ..< pokaz.count {
             yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
-            
-            
         }
         let set1 = LineChartDataSet(values: yVals1, label: "some")
-        set1.removeFirst()
+        
         set1.lineDashLengths = [5, 2.5]
         set1.highlightLineDashLengths = [5, 2.5]
         set1.setColor(.red)
@@ -52,32 +41,20 @@ class GasVC: UIViewController, ChartViewDelegate {
         let gradientColors = [ChartColorTemplates.colorFromString("#00ff0000").cgColor,
                               ChartColorTemplates.colorFromString("#ffff0000").cgColor]
         let gradient = CGGradient(colorsSpace: nil, colors: gradientColors as CFArray, locations: nil)!
-        updateViewConstraints()
         set1.fillAlpha = 1
         set1.fill = Fill(linearGradient: gradient, angle: 90)
         set1.drawFilledEnabled = true
-        
-        //let data = LineChartData(dataSet: set1)
         var dataSets : [LineChartDataSet] = [LineChartDataSet]()
         dataSets.append(set1)
         let data: LineChartData = LineChartData(dataSets: dataSets)
         data.setValueTextColor(UIColor.white)
         
-        set1.notifyDataSetChanged()
-        yVals1.removeAll()
-        data.notifyDataChanged()
-        lineChartView.notifyDataSetChanged()
-        
         self.lineChartView.data = data
     }
- 
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-     //   gas.getGas()
-        lineChartView.notifyDataSetChanged()
-   
         print(gas.getGas())
         print(gas.getDate())
     }
     
-
 }

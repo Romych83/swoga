@@ -12,3 +12,10 @@ struct WaterStatistics {
     let water: Float
     let date: Date
 }
+extension WaterStatistics {
+    init?(waterDataModel: WaterDataModel) {
+        guard let date = waterDataModel.date else { return nil}
+        self.water = waterDataModel.water
+        self.date = date
+    }
+}

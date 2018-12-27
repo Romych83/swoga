@@ -9,24 +9,25 @@
 import UIKit
 
 class WaterStatisticVC: UIViewController {
+    let waters = DataManagerWater()
     
     @IBOutlet weak var enteredNumbers: UITextField!
     
     @IBOutlet weak var resultText: UITextField!
     
     @IBAction func buttonPressed() {
-        var waters = Float()
+        
         if let enteredText = enteredNumbers.text, let enterNum = Float(enteredText) {
-            waters = Float(enterNum)
-            let water = DataWater(waterReadings: waters, costWaterForOneM3: 15.78)
-            let waterForDay = WaterStatistics(water: water.resultForReading, date: .init())
-            print(waterForDay)
-            resultText.text = String(water.resultForReading)
-        reloadInputViews()
             
+            let water = DataWater(waterReadings: enterNum, costWaterForOneM3: 8.5)
+            resultText.text = String(water.resultForReading)
+            self.waters.saveWater(data: resultText.text!, date: Date.init())
         } else {
             resultText.text = "Enter valid data!"
         }
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }
 

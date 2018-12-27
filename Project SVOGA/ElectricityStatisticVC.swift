@@ -9,19 +9,19 @@
 import UIKit
 
 class ElectricityStatisticVC: UIViewController {
+    let electricitys = DataManagerElectricity()
     
     @IBOutlet weak var enteredNumbers: UITextField!
     
     @IBOutlet weak var resultText: UITextField!
     
     @IBAction func buttonPressed() {
-        var electricitys = Float()
+        
         if let enteredText = enteredNumbers.text, let enterNum = Float(enteredText) {
-            electricitys = Float(enterNum)
-            let electricity = DataElectricity(electricityReadings: electricitys, costElectricityForKWH: 1.2)
-            let electricityForDay = ElectricityStatistic(electricity: electricity.resultForReading, date: .init())
-            print(electricityForDay)
+            
+            let electricity = DataElectricity(electricityReadings: enterNum, costElectricityForKWH: 1.2)
             resultText.text = String(electricity.resultForReading)
+            self.electricitys.saveElectricity(data: resultText.text!, date: Date.init())
         } else {
             resultText.text = "Enter valid data!"
         }

@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FA067E221D4E2A7007A5DAE /* DataManagerWater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA067E121D4E2A7007A5DAE /* DataManagerWater.swift */; };
+		3FA067E421D4E429007A5DAE /* DataManagerElectricity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA067E321D4E429007A5DAE /* DataManagerElectricity.swift */; };
 		AFF456550F6430792FD91031 /* libPods-Project SVOGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59DD272F7380F906C70F11C7 /* libPods-Project SVOGA.a */; };
 		C205A7F421B7092E006A8AD4 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F321B7092E006A8AD4 /* DateExtensions.swift */; };
 		C205A7F721B709F9006A8AD4 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F521B709F9006A8AD4 /* DataModel.xcdatamodeld */; };
-		C205A7F921B71589006A8AD4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F821B71589006A8AD4 /* DataManager.swift */; };
+		C205A7F921B71589006A8AD4 /* DataManagerGas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F821B71589006A8AD4 /* DataManagerGas.swift */; };
 		C20BDE5721B7CDCE0053C11E /* DataElectricity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20BDE5621B7CDCE0053C11E /* DataElectricity.swift */; };
 		C20DB07D21B6EBAC00F871B4 /* GasStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DB07C21B6EBAC00F871B4 /* GasStatistics.swift */; };
 		C20DB07F21B6FDF100F871B4 /* WaterStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DB07E21B6FDF100F871B4 /* WaterStatistic.swift */; };
@@ -33,11 +35,13 @@
 
 /* Begin PBXFileReference section */
 		000D0CE7647F1522237E572C /* Pods-Project SVOGA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project SVOGA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project SVOGA/Pods-Project SVOGA.debug.xcconfig"; sourceTree = "<group>"; };
+		3FA067E121D4E2A7007A5DAE /* DataManagerWater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerWater.swift; sourceTree = "<group>"; };
+		3FA067E321D4E429007A5DAE /* DataManagerElectricity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerElectricity.swift; sourceTree = "<group>"; };
 		59DD272F7380F906C70F11C7 /* libPods-Project SVOGA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project SVOGA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EEE65DF56C7E74120E8E709 /* Pods-Project SVOGA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project SVOGA.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project SVOGA/Pods-Project SVOGA.release.xcconfig"; sourceTree = "<group>"; };
 		C205A7F321B7092E006A8AD4 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		C205A7F621B709F9006A8AD4 /* Data Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Data Model.xcdatamodel"; sourceTree = "<group>"; };
-		C205A7F821B71589006A8AD4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C205A7F821B71589006A8AD4 /* DataManagerGas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerGas.swift; sourceTree = "<group>"; };
 		C20BDE5621B7CDCE0053C11E /* DataElectricity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataElectricity.swift; sourceTree = "<group>"; };
 		C20DB07C21B6EBAC00F871B4 /* GasStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStatistics.swift; sourceTree = "<group>"; };
 		C20DB07E21B6FDF100F871B4 /* WaterStatistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterStatistic.swift; sourceTree = "<group>"; };
@@ -72,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FA067E621D4EA15007A5DAE /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C205A7F821B71589006A8AD4 /* DataManagerGas.swift */,
+				3FA067E121D4E2A7007A5DAE /* DataManagerWater.swift */,
+				3FA067E321D4E429007A5DAE /* DataManagerElectricity.swift */,
+			);
+			name = DataManager;
+			sourceTree = "<group>";
+		};
 		8ACE436892562913C832097A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +98,7 @@
 		C20AD64E21B7BF380023DE3D /* DATA */ = {
 			isa = PBXGroup;
 			children = (
+				C205A7F321B7092E006A8AD4 /* DateExtensions.swift */,
 				C2517E0F21B563B60016B72E /* DataGas.swift */,
 				C20BDE5621B7CDCE0053C11E /* DataElectricity.swift */,
 				C23FC7C921B7BC98002B1663 /* DataWater.swift */,
@@ -146,10 +161,9 @@
 			children = (
 				C29F601F21B2F33D00C4F58B /* AppDelegate.swift */,
 				C29F602321B2F33D00C4F58B /* Main.storyboard */,
-				C20AD64E21B7BF380023DE3D /* DATA */,
-				C205A7F321B7092E006A8AD4 /* DateExtensions.swift */,
 				C205A7F521B709F9006A8AD4 /* DataModel.xcdatamodeld */,
-				C205A7F821B71589006A8AD4 /* DataManager.swift */,
+				C20AD64E21B7BF380023DE3D /* DATA */,
+				3FA067E621D4EA15007A5DAE /* DataManager */,
 				C20AD65021B7BFC40023DE3D /* Struct Statist */,
 				C20AD65121B7BFFA0023DE3D /* VC */,
 				C20AD64F21B7BF790023DE3D /* StatisticVC */,
@@ -267,13 +281,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C205A7F721B709F9006A8AD4 /* DataModel.xcdatamodeld in Sources */,
-				C205A7F921B71589006A8AD4 /* DataManager.swift in Sources */,
+				C205A7F921B71589006A8AD4 /* DataManagerGas.swift in Sources */,
 				C23191B221B2FB98007C6A68 /* WaterVC.swift in Sources */,
 				C20BDE5721B7CDCE0053C11E /* DataElectricity.swift in Sources */,
 				C29F602221B2F33D00C4F58B /* ViewController.swift in Sources */,
+				3FA067E421D4E429007A5DAE /* DataManagerElectricity.swift in Sources */,
 				C23FC7CA21B7BC98002B1663 /* DataWater.swift in Sources */,
 				C20DB07F21B6FDF100F871B4 /* WaterStatistic.swift in Sources */,
 				C23191B821B2FBE2007C6A68 /* WaterStatisticVC.swift in Sources */,
+				3FA067E221D4E2A7007A5DAE /* DataManagerWater.swift in Sources */,
 				C2517E1021B563B60016B72E /* DataGas.swift in Sources */,
 				C23191BA21B2FC58007C6A68 /* GasStatisticVC.swift in Sources */,
 				C20DB08121B6FE9C00F871B4 /* ElectricityStatistic.swift in Sources */,

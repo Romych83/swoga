@@ -38,7 +38,19 @@
                     <view key="view" contentMode="scaleToFill" id="GgE-G7-VVY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zjh-YM-49H" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="15" y="74" width="384" height="465"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zjh-YM-49H" firstAttribute="leading" secondItem="2uF-um-IA6" secondAttribute="leading" constant="15" id="NHf-Rc-Rwg"/>
+                            <constraint firstItem="Zjh-YM-49H" firstAttribute="top" secondItem="2uF-um-IA6" secondAttribute="top" constant="10" id="XYI-uZ-gQk"/>
+                            <constraint firstItem="2uF-um-IA6" firstAttribute="trailing" secondItem="Zjh-YM-49H" secondAttribute="trailing" constant="15" id="kKt-wC-RRh"/>
+                            <constraint firstItem="2uF-um-IA6" firstAttribute="bottom" secondItem="Zjh-YM-49H" secondAttribute="bottom" constant="148" id="rKg-PV-wgg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2uF-um-IA6"/>
                     </view>
                     <toolbarItems/>
@@ -50,6 +62,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="Zjh-YM-49H" id="ve6-aN-zGT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ltc-rf-PaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,7 +246,19 @@
                     <view key="view" contentMode="top" id="x9q-1k-Clr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vye-Ft-dt6" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="15" y="74" width="384" height="465"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.76576421994075505" green="1" blue="0.7500134698667914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wRf-kJ-K4D" firstAttribute="bottom" secondItem="vye-Ft-dt6" secondAttribute="bottom" constant="148" id="5Xj-Ch-xfG"/>
+                            <constraint firstItem="vye-Ft-dt6" firstAttribute="top" secondItem="wRf-kJ-K4D" secondAttribute="top" constant="10" id="EYc-Mt-ub0"/>
+                            <constraint firstItem="vye-Ft-dt6" firstAttribute="leading" secondItem="wRf-kJ-K4D" secondAttribute="leading" constant="15" id="be4-VC-qIt"/>
+                            <constraint firstItem="wRf-kJ-K4D" firstAttribute="trailing" secondItem="vye-Ft-dt6" secondAttribute="trailing" constant="15" id="cUZ-FH-SE9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wRf-kJ-K4D"/>
                     </view>
                     <navigationItem key="navigationItem" id="99g-Mc-Mda">
@@ -241,6 +268,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lineChartView" destination="vye-Ft-dt6" id="clG-Vu-12T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLx-yE-jA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
