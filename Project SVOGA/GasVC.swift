@@ -13,10 +13,15 @@ class GasVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var lineChartView: LineChartView!
     let gas = DataManagerGas()
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setChartData(pokaz: gas.getGas(), date: gas.getDate())
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // gas.DeleteAllDataGas()
-        setChartData(pokaz: gas.getGas(), date: gas.getDate())
+       // setChartData(pokaz: gas.getGas(), date: gas.getDate())
     }
     
     func setChartData(pokaz: [Float], date: [String]) {

@@ -1,0 +1,6 @@
+module Pods_Project_SVOGA {
+  umbrella header "Pods-Project SVOGA-umbrella.h"
+
+  export *
+  module * { export * }
+}
