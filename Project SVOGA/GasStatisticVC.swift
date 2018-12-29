@@ -20,7 +20,7 @@ class GasStatisticVC: UIViewController {
         if let enteredText = enteredNumbers.text, let enterNum = Float(enteredText) {
             let gas = DataGas(gasReadings: enterNum, costGasForOneM3: 8.5)
             resultText.text = String(gas.resultForReading)
-           self.gass.saveGas(data: resultText.text!, date: Date.init())
+            self.gass.saveGas(data: resultText.text!, amount: Float(enterNum), date: Date.init())
         } else {
             resultText.text = "Enter valid data!"
         }

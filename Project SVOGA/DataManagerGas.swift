@@ -25,6 +25,18 @@ final class DataManagerGas {
         return masive
     }
     
+    func getGasAmount() -> [Float] {
+        let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "GasDataModel")
+        let request = try! context.fetch(userFetch)
+        var masive = [Float]()
+        for data in request as! [NSManagedObject] {
+            masive.append(data.value(forKey: "gasAmount") as! Float)
+        }
+        let newMasive = masive
+        masive = Array(newMasive)
+        return masive
+    }
+    
     func getDate() -> [String] {
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "GasDataModel")
         //userFetch.fetchLimit = 5
@@ -37,11 +49,12 @@ final class DataManagerGas {
         return masive
     }
     
-    func saveGas(data: String, date: Date) {
+    func saveGas(data: String, amount: Float, date: Date) {
         let gasEntity = NSEntityDescription.entity(forEntityName: "GasDataModel", in: context)!
         let gasRead = NSManagedObject(entity: gasEntity, insertInto: context)
         gasRead.setValue(Float(data), forKeyPath: "gas")
         gasRead.setValue(date, forKeyPath: "date")
+        gasRead.setValue(amount, forKey: "gasAmount")
         
         do {
             try context.save()
@@ -49,6 +62,7 @@ final class DataManagerGas {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
+    
     func DeleteAllDataGas() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext

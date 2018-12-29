@@ -17,7 +17,8 @@ class ElectricityVC: UIViewController, ChartViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         // electricity.DeleteAllDataElectricity()
-        setChartData(pokaz: electricity.getElectricity(), date: electricity.getDate())
+        setChartData(pokaz: electricity.getElectricityAmount(), date: electricity.getDate())
+       // setChartData(pokaz: electricity.getElectricityAmount(), date: electricity.getDate())
     }
     
     func setChartData(pokaz: [Float], date: [String]) {

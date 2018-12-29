@@ -28,6 +28,18 @@ final class DataManagerElectricity {
         return masive
     }
     
+    func getElectricityAmount() -> [Float] {
+        let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "ElectricityDataModel")
+        let request = try! context.fetch(userFetch)
+        var masive = [Float]()
+        for data in request as! [NSManagedObject] {
+            masive.append(data.value(forKey: "electricityAmount") as! Float)
+        }
+        let newMasive = masive
+        masive = Array(newMasive)
+        return masive
+    }
+    
     func getDate() -> [String] {
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "ElectricityDataModel")
         //userFetch.fetchLimit = 5
@@ -40,11 +52,13 @@ final class DataManagerElectricity {
         return masive
     }
     
-    func saveElectricity(data: String, date: Date) {
+    func saveElectricity(data: String, amount: Float, date: Date) {
         let electricityEntity = NSEntityDescription.entity(forEntityName: "ElectricityDataModel", in: context)!
         let electricityRead = NSManagedObject(entity: electricityEntity, insertInto: context)
         electricityRead.setValue(Float(data), forKeyPath: "electricity")
         electricityRead.setValue(date, forKeyPath: "date")
+        electricityRead.setValue(amount, forKey: "electricityAmount")
+        
         do {
             try context.save()
         } catch let error as NSError {
