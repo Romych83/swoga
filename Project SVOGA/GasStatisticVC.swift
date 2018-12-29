@@ -18,7 +18,6 @@ class GasStatisticVC: UIViewController {
     @IBAction func buttonPressed() {
         
         if let enteredText = enteredNumbers.text, let enterNum = Float(enteredText) {
-            
             let gas = DataGas(gasReadings: enterNum, costGasForOneM3: 8.5)
             resultText.text = String(gas.resultForReading)
            self.gass.saveGas(data: resultText.text!, date: Date.init())
@@ -26,8 +25,20 @@ class GasStatisticVC: UIViewController {
             resultText.text = "Enter valid data!"
         }
     }
+    @IBAction func deleteGas(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Attantion", message: "Delete all data?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.gass.DeleteAllDataGas()
+        }
+        let canelActioin = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(canelActioin)
+        present(alert, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        enteredNumbers.keyboardType = UIKeyboardType.decimalPad
     }
 }
 

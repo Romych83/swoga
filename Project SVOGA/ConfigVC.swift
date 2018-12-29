@@ -9,15 +9,17 @@
 import UIKit
 
 class ConfigVC: UIViewController {
-
+    let confStep = DataManagerConfig()
+    var step = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(step)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   
+    @IBAction func stepper(_ sender: UIStepper) {
+        var step = 5
+        step = Int(sender.value)
+        self.step = step
+       confStep.saveStep(data: step)
     }
 }

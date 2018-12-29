@@ -9,10 +9,11 @@
 import UIKit
 import Charts
 class GasVC: UIViewController, ChartViewDelegate {
-    
+
     @IBOutlet weak var lineChartView: LineChartView!
-    let gas = DataManagerGas()
     
+    let gas = DataManagerGas()
+    let step = DataManagerConfig()
     
     override func viewWillAppear(_ animated: Bool) {
         setChartData(pokaz: gas.getGas(), date: gas.getDate())
@@ -20,18 +21,22 @@ class GasVC: UIViewController, ChartViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // gas.DeleteAllDataGas()
-       // setChartData(pokaz: gas.getGas(), date: gas.getDate())
     }
     
     func setChartData(pokaz: [Float], date: [String]) {
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:date)
-        for i in 0 ..< pokaz.count {
-            yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
+        if pokaz.count < step.getStep() {
+            for i in 0 ..< pokaz.count {
+                yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
+            }
+        } else {
+            for i in pokaz.count - step.getStep() ..< pokaz.count {
+                yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
+            }
         }
-        let set1 = LineChartDataSet(values: yVals1, label: "some")
         
+        let set1 = LineChartDataSet(values: yVals1, label: "Gas")
         set1.lineDashLengths = [5, 2.5]
         set1.highlightLineDashLengths = [5, 2.5]
         set1.setColor(.red)
@@ -53,7 +58,6 @@ class GasVC: UIViewController, ChartViewDelegate {
         dataSets.append(set1)
         let data: LineChartData = LineChartData(dataSets: dataSets)
         data.setValueTextColor(UIColor.white)
-        
         self.lineChartView.data = data
     }
     
@@ -61,5 +65,4 @@ class GasVC: UIViewController, ChartViewDelegate {
         print(gas.getGas())
         print(gas.getDate())
     }
-    
 }

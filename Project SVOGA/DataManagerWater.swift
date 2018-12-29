@@ -23,8 +23,6 @@ final class DataManagerWater {
         for data in request as! [NSManagedObject] {
             masive.append(data.value(forKey: "water") as! Float)
         }
-        let newMasive = masive
-        masive = Array(newMasive)
         return masive
     }
     

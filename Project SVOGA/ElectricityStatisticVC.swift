@@ -18,7 +18,6 @@ class ElectricityStatisticVC: UIViewController {
     @IBAction func buttonPressed() {
         
         if let enteredText = enteredNumbers.text, let enterNum = Float(enteredText) {
-            
             let electricity = DataElectricity(electricityReadings: enterNum, costElectricityForKWH: 1.2)
             resultText.text = String(electricity.resultForReading)
             self.electricitys.saveElectricity(data: resultText.text!, date: Date.init())
@@ -26,4 +25,9 @@ class ElectricityStatisticVC: UIViewController {
             resultText.text = "Enter valid data!"
         }
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        enteredNumbers.keyboardType = UIKeyboardType.decimalPad
+    }   
 }

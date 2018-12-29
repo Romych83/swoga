@@ -14,9 +14,7 @@ final class DataManagerGas {
     lazy var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func getGas() -> [Float] {
-        
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "GasDataModel")
-        //userFetch.fetchLimit = 5
         let request = try! context.fetch(userFetch)
         var masive = [Float]()
         for data in request as! [NSManagedObject] {
@@ -36,9 +34,6 @@ final class DataManagerGas {
             let someData = data.value(forKey: "date") as! Date
             masive.append(someData.shortString)
         }
-        
-        let newMasive = masive
-        masive = Array(newMasive)
         return masive
     }
     
@@ -47,7 +42,7 @@ final class DataManagerGas {
         let gasRead = NSManagedObject(entity: gasEntity, insertInto: context)
         gasRead.setValue(Float(data), forKeyPath: "gas")
         gasRead.setValue(date, forKeyPath: "date")
-       
+        
         do {
             try context.save()
         } catch let error as NSError {
@@ -65,5 +60,4 @@ final class DataManagerGas {
             print(error)
         }
     }
-    
 }

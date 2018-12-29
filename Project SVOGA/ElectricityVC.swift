@@ -11,10 +11,11 @@ import Charts
 class ElectricityVC: UIViewController, ChartViewDelegate {
  
     @IBOutlet weak var lineChartView: LineChartView!
-    let electricity = DataManagerElectricity()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    let electricity = DataManagerElectricity()
+    let step = DataManagerConfig()
+    
+    override func viewWillAppear(_ animated: Bool) {
         // electricity.DeleteAllDataElectricity()
         setChartData(pokaz: electricity.getElectricity(), date: electricity.getDate())
     }
@@ -22,11 +23,16 @@ class ElectricityVC: UIViewController, ChartViewDelegate {
     func setChartData(pokaz: [Float], date: [String]) {
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:date)
-        for i in 0 ..< pokaz.count {
-            yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
+        if pokaz.count < step.getStep() {
+            for i in 0 ..< pokaz.count {
+                yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
+            }
+        } else {
+            for i in pokaz.count - step.getStep() ..< pokaz.count {
+                yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
+            }
         }
-        let set1 = LineChartDataSet(values: yVals1, label: "some")
-        
+        let set1 = LineChartDataSet(values: yVals1, label: "Electricity")
         set1.lineDashLengths = [5, 2.5]
         set1.highlightLineDashLengths = [5, 2.5]
         set1.setColor(.red)
@@ -48,7 +54,6 @@ class ElectricityVC: UIViewController, ChartViewDelegate {
         dataSets.append(set1)
         let data: LineChartData = LineChartData(dataSets: dataSets)
         data.setValueTextColor(UIColor.white)
-        
         self.lineChartView.data = data
     }
     

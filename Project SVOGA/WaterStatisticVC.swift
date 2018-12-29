@@ -18,7 +18,6 @@ class WaterStatisticVC: UIViewController {
     @IBAction func buttonPressed() {
         
         if let enteredText = enteredNumbers.text, let enterNum = Float(enteredText) {
-            
             let water = DataWater(waterReadings: enterNum, costWaterForOneM3: 8.5)
             resultText.text = String(water.resultForReading)
             self.waters.saveWater(data: resultText.text!, date: Date.init())
@@ -26,8 +25,19 @@ class WaterStatisticVC: UIViewController {
             resultText.text = "Enter valid data!"
         }
     }
+    @IBAction func deleteWater(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Attantion", message: "Delete all data?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.waters.DeleteAllDataWater()
+        }
+        let canelActioin = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(canelActioin)
+        present(alert, animated: true)    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        enteredNumbers.keyboardType = UIKeyboardType.decimalPad
     }
 }
 

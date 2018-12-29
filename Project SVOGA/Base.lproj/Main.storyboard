@@ -138,22 +138,36 @@
                                     <action selector="buttonPressed" destination="Hwj-7j-TK5" eventType="touchUpInside" id="MaQ-Kw-hFL"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter data" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SaG-2f-gVu">
-                                <rect key="frame" x="43" y="138" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter data" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SaG-2f-gVu">
+                                <rect key="frame" x="43.000000000000007" y="138" width="87.666666666666686" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="You result" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eSn-VO-Prg">
-                                <rect key="frame" x="43" y="189" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="You result" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eSn-VO-Prg">
+                                <rect key="frame" x="42.999999999999993" y="189" width="85.333333333333314" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTQ-HK-370">
+                                <rect key="frame" x="37" y="255" width="93" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="DeleteAllData"/>
+                                <connections>
+                                    <action selector="deleteWater:" destination="Hwj-7j-TK5" eventType="touchUpInside" id="u68-6i-azm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.70305350142676382" green="1" blue="0.71007483460018639" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SaG-2f-gVu" firstAttribute="leading" secondItem="Q50-lX-AYv" secondAttribute="leading" constant="43" id="9V6-YK-Xtv"/>
+                            <constraint firstItem="NTQ-HK-370" firstAttribute="top" secondItem="eSn-VO-Prg" secondAttribute="bottom" constant="36" id="H1W-Gn-SzG"/>
+                            <constraint firstItem="SaG-2f-gVu" firstAttribute="top" secondItem="Q50-lX-AYv" secondAttribute="top" constant="74" id="IjV-It-z3J"/>
+                            <constraint firstItem="eSn-VO-Prg" firstAttribute="top" secondItem="SaG-2f-gVu" secondAttribute="bottom" constant="21" id="SJg-dk-kWh"/>
+                            <constraint firstItem="NTQ-HK-370" firstAttribute="leading" secondItem="Q50-lX-AYv" secondAttribute="leading" constant="49" id="eiU-ZN-hcI"/>
+                            <constraint firstItem="eSn-VO-Prg" firstAttribute="leading" secondItem="Q50-lX-AYv" secondAttribute="leading" constant="43" id="jFB-ez-4mh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Q50-lX-AYv"/>
                     </view>
                     <connections>
@@ -190,22 +204,36 @@
                                     <action selector="buttonPressed" destination="CpV-Yg-tkn" eventType="touchUpInside" id="c82-OB-gOA"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter data" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sIe-cn-R78">
-                                <rect key="frame" x="49" y="139" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter data" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sIe-cn-R78">
+                                <rect key="frame" x="49.000000000000007" y="139" width="87.666666666666686" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="You result" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibz-up-vaY">
-                                <rect key="frame" x="49" y="201" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="You result" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibz-up-vaY">
+                                <rect key="frame" x="48.999999999999993" y="201" width="85.333333333333314" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chV-xs-T7w">
+                                <rect key="frame" x="49" y="255" width="117" height="30"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="DeleteAllData"/>
+                                <connections>
+                                    <action selector="deleteGas:" destination="CpV-Yg-tkn" eventType="touchUpInside" id="sca-YM-XLz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92616256468454883" blue="0.66958057704510798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="chV-xs-T7w" firstAttribute="leading" secondItem="hFB-wN-kVY" secondAttribute="leading" constant="49" id="5Ec-uK-2Uy"/>
+                            <constraint firstItem="sIe-cn-R78" firstAttribute="top" secondItem="hFB-wN-kVY" secondAttribute="top" constant="75" id="NUg-SC-kbA"/>
+                            <constraint firstItem="ibz-up-vaY" firstAttribute="leading" secondItem="hFB-wN-kVY" secondAttribute="leading" constant="49" id="Rns-JZ-8UB"/>
+                            <constraint firstItem="sIe-cn-R78" firstAttribute="leading" secondItem="hFB-wN-kVY" secondAttribute="leading" constant="49" id="abh-RN-ohE"/>
+                            <constraint firstItem="ibz-up-vaY" firstAttribute="top" secondItem="sIe-cn-R78" secondAttribute="bottom" constant="32" id="uVe-RL-5aw"/>
+                            <constraint firstItem="chV-xs-T7w" firstAttribute="top" secondItem="ibz-up-vaY" secondAttribute="bottom" constant="24" id="uYY-4p-I1B"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hFB-wN-kVY"/>
                     </view>
                     <connections>
@@ -311,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBV-EW-w2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2728.985507246377" y="1044.2934782608697"/>
+            <point key="canvasLocation" x="2729" y="1030"/>
         </scene>
         <!--Config-->
         <scene sceneID="PaX-5e-3aI">
@@ -326,8 +354,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="5" maximumValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="L9x-9V-9qI">
+                                <rect key="frame" x="279" y="64" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepper:" destination="v0L-ZU-gZb" eventType="valueChanged" id="j2V-bw-Ya2"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <color key="backgroundColor" red="0.61161459918401717" green="0.60000150703558586" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ljx-aq-JWW" firstAttribute="trailing" secondItem="L9x-9V-9qI" secondAttribute="trailing" constant="41" id="UXI-Xr-s1e"/>
+                            <constraint firstItem="L9x-9V-9qI" firstAttribute="top" secondItem="ljx-aq-JWW" secondAttribute="top" constant="44" id="ja7-2h-Ha5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ljx-aq-JWW"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Config" image="icons8-gears" id="6MB-eB-GWj"/>

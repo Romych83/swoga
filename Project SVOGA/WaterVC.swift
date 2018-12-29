@@ -11,10 +11,11 @@ import Charts
 class WaterVC: UIViewController, ChartViewDelegate {
 
     @IBOutlet weak var lineChartView: LineChartView!
-    let water = DataManagerWater()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    let water = DataManagerWater()
+    let step = DataManagerConfig()
+    
+      override func viewWillAppear(_ animated: Bool) {
         // water.DeleteAllDataWater()
         setChartData(pokaz: water.getWater(), date: water.getDate())
     }
@@ -22,11 +23,17 @@ class WaterVC: UIViewController, ChartViewDelegate {
     func setChartData(pokaz: [Float], date: [String]) {
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:date)
-        for i in 0 ..< pokaz.count {
-            yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
+        if pokaz.count < step.getStep() {
+            for i in 0 ..< pokaz.count {
+                yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
+            }
+        } else {
+            for i in pokaz.count - step.getStep() ..< pokaz.count {
+                yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
+            }
         }
-        let set1 = LineChartDataSet(values: yVals1, label: "some")
         
+        let set1 = LineChartDataSet(values: yVals1, label: "Water")
         set1.lineDashLengths = [5, 2.5]
         set1.highlightLineDashLengths = [5, 2.5]
         set1.setColor(.red)
@@ -48,7 +55,6 @@ class WaterVC: UIViewController, ChartViewDelegate {
         dataSets.append(set1)
         let data: LineChartData = LineChartData(dataSets: dataSets)
         data.setValueTextColor(UIColor.white)
-        
         self.lineChartView.data = data
     }
     
@@ -56,5 +62,4 @@ class WaterVC: UIViewController, ChartViewDelegate {
         print(water.getWater())
         print(water.getDate())
     }
-    
 }

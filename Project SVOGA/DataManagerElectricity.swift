@@ -37,9 +37,6 @@ final class DataManagerElectricity {
             let someData = data.value(forKey: "date") as! Date
             masive.append(someData.shortString)
         }
-        
-        let newMasive = masive
-        masive = Array(newMasive)
         return masive
     }
     
@@ -54,6 +51,7 @@ final class DataManagerElectricity {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
+    
     func DeleteAllDataElectricity() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -65,5 +63,4 @@ final class DataManagerElectricity {
             print(error)
         }
     }
-    
 }
