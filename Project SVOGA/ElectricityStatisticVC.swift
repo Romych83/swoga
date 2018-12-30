@@ -18,9 +18,16 @@ class ElectricityStatisticVC: UIViewController {
     @IBAction func buttonPressed() {
         
         if let enteredText = enteredNumbers.text, let enterNum = Float(enteredText) {
-            let electricity = DataElectricity(electricityReadings: enterNum, costElectricityForKWH: 1.2)
-            resultText.text = String(electricity.resultForReading)
-            self.electricitys.saveElectricity(data: resultText.text!, amount: enterNum, date: Date.init())
+            if electricitys.getElectricity().isEmpty == true {
+                let electricity = DataElectricity(electricityReadings: enterNum, costElectricityForKWH: 1.2)
+                resultText.text = String(electricity.resultForReading)
+                self.electricitys.saveElectricity(data: resultText.text!, amount: Float(0), date: Date.init())
+            } else {
+                let electricity = DataElectricity(electricityReadings: enterNum, costElectricityForKWH: 1.2)
+                resultText.text = String(electricity.resultForReading)
+                self.electricitys.saveElectricity(data: resultText.text!, amount: Float(electricity.resultForReading - electricitys.getElectricity().last!), date: Date.init())
+            }
+            
         } else {
             resultText.text = "Enter valid data!"
         }

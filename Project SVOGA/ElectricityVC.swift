@@ -17,8 +17,8 @@ class ElectricityVC: UIViewController, ChartViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         // electricity.DeleteAllDataElectricity()
-        setChartData(pokaz: electricity.getElectricityAmount(), date: electricity.getDate())
        // setChartData(pokaz: electricity.getElectricityAmount(), date: electricity.getDate())
+        setChartData(pokaz: electricity.getElectricity(), date: electricity.getDate())
     }
     
     func setChartData(pokaz: [Float], date: [String]) {
@@ -61,6 +61,7 @@ class ElectricityVC: UIViewController, ChartViewDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print(electricity.getElectricity())
         print(electricity.getDate())
+        setChartData(pokaz: electricity.getElectricityAmount(), date: electricity.getDate())
     }
     
 }

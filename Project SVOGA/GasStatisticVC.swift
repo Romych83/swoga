@@ -15,16 +15,29 @@ class GasStatisticVC: UIViewController {
     
     @IBOutlet weak var resultText: UITextField!
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     @IBAction func buttonPressed() {
         
         if let enteredText = enteredNumbers.text, let enterNum = Float(enteredText) {
-            let gas = DataGas(gasReadings: enterNum, costGasForOneM3: 8.5)
-            resultText.text = String(gas.resultForReading)
-            self.gass.saveGas(data: resultText.text!, amount: Float(enterNum), date: Date.init())
+            if gass.getGas().isEmpty == true {
+                let gas = DataGas(gasReadings: enterNum, costGasForOneM3: 8.5)
+                resultText.text = String(gas.resultForReading)
+                self.gass.saveGas(data: resultText.text!, amount: Float(0), date: Date.init())
+            } else {
+                let gas = DataGas(gasReadings: enterNum , costGasForOneM3: 8.5)
+                resultText.text = String(gas.resultForReading)
+                self.gass.saveGas(data: resultText.text!, amount: Float(gas.resultForReading - gass.getGas().last!), date: Date.init())
+            }
+            
         } else {
             resultText.text = "Enter valid data!"
         }
     }
+    
     @IBAction func deleteGas(_ sender: UIButton) {
         let alert = UIAlertController(title: "Attantion", message: "Delete all data?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (action) in

@@ -16,7 +16,7 @@ class GasVC: UIViewController, ChartViewDelegate {
     let step = DataManagerConfig()
     
     override func viewWillAppear(_ animated: Bool) {
-        setChartData(pokaz: gas.getGas(), date: gas.getDate())
+       // setChartData(pokaz: gas.getGas(), date: gas.getDate())
         setChartData(pokaz: gas.getGasAmount(), date: gas.getDate())
     }
     
