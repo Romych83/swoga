@@ -59,6 +59,17 @@ class WaterVC: UIViewController, ChartViewDelegate {
         self.lineChartView.data = data
     }
     
+    @IBAction func segmentWater(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            setChartData(pokaz: water.getWaterAmount(), date: water.getDate())
+        case 1:
+            setChartData(pokaz: water.getWater(), date: water.getDate())
+        default:
+            break
+        }
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print(water.getWater())
         print(water.getDate())

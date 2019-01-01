@@ -22,6 +22,7 @@ class GasVC: UIViewController, ChartViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
     }
     
     func setChartData(pokaz: [Float], date: [String]) {
@@ -63,6 +64,16 @@ class GasVC: UIViewController, ChartViewDelegate {
         self.lineChartView.data = data
     }
     
+    @IBAction func segmentGas(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            setChartData(pokaz: gas.getGasAmount(), date: gas.getDate())
+        case 1:
+            setChartData(pokaz: gas.getGas(), date: gas.getDate())
+        default:
+            break
+        }
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print(gas.getGas())
         print(gas.getDate())

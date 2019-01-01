@@ -43,8 +43,19 @@
                                 <rect key="frame" x="15" y="74" width="384" height="465"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="F9r-PR-tKQ">
+                                <rect key="frame" x="184" y="562" width="199" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentElectricity:" destination="oGa-b5-2KV" eventType="valueChanged" id="pQk-EY-dVV"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Zjh-YM-49H" firstAttribute="leading" secondItem="2uF-um-IA6" secondAttribute="leading" constant="15" id="NHf-Rc-Rwg"/>
                             <constraint firstItem="Zjh-YM-49H" firstAttribute="top" secondItem="2uF-um-IA6" secondAttribute="top" constant="10" id="XYI-uZ-gQk"/>
@@ -288,6 +299,17 @@
                                 <rect key="frame" x="15" y="74" width="384" height="465"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DeK-iD-2hS">
+                                <rect key="frame" x="190" y="559" width="199" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentWater:" destination="cfd-1i-Lbw" eventType="valueChanged" id="x4p-Zx-WgC"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.76576421994075505" green="1" blue="0.7500134698667914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -325,11 +347,24 @@
                                 <rect key="frame" x="15" y="74" width="384" height="465"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J5O-MC-CrS">
+                                <rect key="frame" x="200" y="560" width="199" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentGas:" destination="GzD-i3-yoy" eventType="valueChanged" id="RYx-gU-19O"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8706062335889293" blue="0.62041131618263667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vDT-yW-kRs" firstAttribute="leading" secondItem="nTo-Kx-TMP" secondAttribute="leading" constant="15" id="19Z-dd-Zj0"/>
+                            <constraint firstItem="J5O-MC-CrS" firstAttribute="top" secondItem="vDT-yW-kRs" secondAttribute="bottom" constant="21" id="FHX-ln-QaH"/>
+                            <constraint firstItem="nTo-Kx-TMP" firstAttribute="trailing" secondItem="J5O-MC-CrS" secondAttribute="trailing" constant="15" id="jmJ-Nk-LwU"/>
                             <constraint firstItem="nTo-Kx-TMP" firstAttribute="trailing" secondItem="vDT-yW-kRs" secondAttribute="trailing" constant="15" id="m5A-Ir-9qp"/>
+                            <constraint firstItem="J5O-MC-CrS" firstAttribute="leading" secondItem="nTo-Kx-TMP" secondAttribute="leading" constant="200" id="ogx-VY-Szn"/>
                             <constraint firstItem="nTo-Kx-TMP" firstAttribute="bottom" secondItem="vDT-yW-kRs" secondAttribute="bottom" constant="148" id="qHt-p2-mz0"/>
                             <constraint firstItem="vDT-yW-kRs" firstAttribute="top" secondItem="nTo-Kx-TMP" secondAttribute="top" constant="10" id="vNw-X8-m8y"/>
                         </constraints>
@@ -348,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBV-EW-w2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2729" y="1030"/>
+            <point key="canvasLocation" x="2728.985507246377" y="1029.6195652173915"/>
         </scene>
         <!--Config-->
         <scene sceneID="PaX-5e-3aI">
