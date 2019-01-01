@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F120C0B21D7541500A93A7B /* DataManagerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F120C0A21D7541500A93A7B /* DataManagerConfig.swift */; };
+		3F1273D021DB85B6004F56A1 /* DataCost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1273CF21DB85B6004F56A1 /* DataCost.swift */; };
 		3FA067E221D4E2A7007A5DAE /* DataManagerWater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA067E121D4E2A7007A5DAE /* DataManagerWater.swift */; };
 		3FA067E421D4E429007A5DAE /* DataManagerElectricity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA067E321D4E429007A5DAE /* DataManagerElectricity.swift */; };
 		AFF456550F6430792FD91031 /* libPods-Project SVOGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59DD272F7380F906C70F11C7 /* libPods-Project SVOGA.a */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		000D0CE7647F1522237E572C /* Pods-Project SVOGA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project SVOGA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project SVOGA/Pods-Project SVOGA.debug.xcconfig"; sourceTree = "<group>"; };
 		3F120C0A21D7541500A93A7B /* DataManagerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerConfig.swift; sourceTree = "<group>"; };
+		3F1273CF21DB85B6004F56A1 /* DataCost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCost.swift; sourceTree = "<group>"; };
 		3FA067E121D4E2A7007A5DAE /* DataManagerWater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerWater.swift; sourceTree = "<group>"; };
 		3FA067E321D4E429007A5DAE /* DataManagerElectricity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerElectricity.swift; sourceTree = "<group>"; };
 		59DD272F7380F906C70F11C7 /* libPods-Project SVOGA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project SVOGA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				C205A7F821B71589006A8AD4 /* DataManagerGas.swift */,
+				3F1273CF21DB85B6004F56A1 /* DataCost.swift */,
 				3F120C0A21D7541500A93A7B /* DataManagerConfig.swift */,
 				3FA067E121D4E2A7007A5DAE /* DataManagerWater.swift */,
 				3FA067E321D4E429007A5DAE /* DataManagerElectricity.swift */,
@@ -291,6 +294,7 @@
 				3FA067E421D4E429007A5DAE /* DataManagerElectricity.swift in Sources */,
 				3F120C0B21D7541500A93A7B /* DataManagerConfig.swift in Sources */,
 				C23FC7CA21B7BC98002B1663 /* DataWater.swift in Sources */,
+				3F1273D021DB85B6004F56A1 /* DataCost.swift in Sources */,
 				C20DB07F21B6FDF100F871B4 /* WaterStatistic.swift in Sources */,
 				C23191B821B2FBE2007C6A68 /* WaterStatisticVC.swift in Sources */,
 				3FA067E221D4E2A7007A5DAE /* DataManagerWater.swift in Sources */,

@@ -3,6 +3,11 @@
     <entity name="ConfigDataModel" representedClassName="ConfigDataModel" syncable="YES" codeGenerationType="class">
         <attribute name="stepXChart" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="Cost" representedClassName="Cost" syncable="YES" codeGenerationType="class">
+        <attribute name="electricity" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gas" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="water" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <entity name="ElectricityDataModel" representedClassName="ElectricityDataModel" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="electricity" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -23,5 +28,6 @@
         <element name="ElectricityDataModel" positionX="-54" positionY="18" width="128" height="90"/>
         <element name="GasDataModel" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="WaterDataModel" positionX="-63" positionY="0" width="128" height="90"/>
+        <element name="Cost" positionX="-54" positionY="27" width="128" height="90"/>
     </elements>
 </model>
