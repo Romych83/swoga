@@ -17,19 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mainBackground" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-y2-JIt">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOT-pq-LCU" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="306"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1167386569415082" green="0.76979352874947249" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qOT-pq-LCU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fJP-1A-2qd"/>
+                            <constraint firstItem="qOT-pq-LCU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hA1-at-FZb"/>
+                            <constraint firstItem="qOT-pq-LCU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jDv-M7-mR5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qOT-pq-LCU" secondAttribute="bottom" constant="213" id="xur-mo-ra5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="statistic" image="icons8-statistics" id="qvs-x7-aiA"/>
+                    <connections>
+                        <outlet property="pieView" destination="qOT-pq-LCU" id="cjC-mh-CIp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440.57971014492756" y="132.88043478260872"/>
+            <point key="canvasLocation" x="438.75" y="132.04225352112675"/>
         </scene>
         <!--ElectricityVC-->
         <scene sceneID="SqM-yP-fkT">
@@ -519,7 +528,6 @@
         <image name="icons8-gears" width="75" height="75"/>
         <image name="icons8-statistics" width="75" height="75"/>
         <image name="icons8-water" width="75" height="75"/>
-        <image name="mainBackground" width="400" height="280"/>
         <image name="waterBackground" width="259" height="194"/>
     </resources>
 </document>

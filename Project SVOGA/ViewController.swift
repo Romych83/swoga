@@ -7,14 +7,61 @@
 //
 
 import UIKit
-
+import Charts
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
+    
+    @IBOutlet weak var pieView: PieChartView!
+    
+    let gasData = DataManagerGas()
+    let waterData = DataManagerWater()
+    let electricityData = DataManagerElectricity()
+    
+    var gasDataChart = PieChartDataEntry(value: 0)
+    var waterDataChart = PieChartDataEntry(value: 0)
+    var electricityDataChart = PieChartDataEntry(value: 0)
+    
+    var masiveData = [PieChartDataEntry]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupPieChart()
         
     }
-
+    
+    override func viewDidLoad() {
+        
+        
+    }
+    
+    func setupPieChart() {
+        pieView.chartDescription?.text = "All Statistic"
+        pieView.drawHoleEnabled = false
+//        pieView.rotationEnabled = false
+        gasDataChart.value = Double(calc(data: gasData.getGas()))
+        gasDataChart.label = "Gas"
+        waterDataChart.value = Double(calc(data: waterData.getWater()))
+        waterDataChart.label = "Water"
+        electricityDataChart.value = Double(calc(data: electricityData.getElectricity()))
+        electricityDataChart.label = "Electricity"
+        
+        let allMoney = gasDataChart.value + waterDataChart.value + electricityDataChart.value
+        print(allMoney)
+        masiveData = [gasDataChart, waterDataChart, electricityDataChart]
+        let chartDataSet = PieChartDataSet(values: masiveData, label: nil)
+        let chartData = PieChartData(dataSet: chartDataSet)
+        let colors = [UIColor.init(red: 255 / 255, green: 94 / 255, blue: 0 / 255, alpha: 100),
+                      UIColor.init(red: 0, green: 189 / 255, blue: 38 / 255, alpha: 100),
+                      UIColor.blue]
+        chartDataSet.colors = colors
+        pieView.data = chartData
+    }
+    
+    func calc(data:[Float]) -> Float {
+        var result: Float = 0
+        for i in data {
+            result += i
+        }
+        return result
+    }
+    
 }
 
