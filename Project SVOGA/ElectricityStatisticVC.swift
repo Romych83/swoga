@@ -21,12 +21,12 @@ class ElectricityStatisticVC: UIViewController {
             if electricitys.getElectricity().isEmpty == true {
                 let electricity = DataElectricity(electricityReadings: enterNum, costElectricityForKWH: 1.2)
                 resultText.text = String(electricity.resultForReading)
-                self.electricitys.saveElectricity(data: resultText.text!, amount: Float(0), date: Date.init())
+                self.electricitys.saveElectricity(data: String(enterNum), amount: Float(0), date: Date.init())
                 enteredNumbers.text = ""
             } else {
                 let electricity = DataElectricity(electricityReadings: enterNum, costElectricityForKWH: 1.2)
                 resultText.text = String(electricity.resultForReading)
-                self.electricitys.saveElectricity(data: resultText.text!, amount: Float(electricity.resultForReading - electricitys.getElectricity().last!), date: Date.init())
+                self.electricitys.saveElectricity(data: String(enterNum), amount: Float(electricity.resultForReading - electricitys.getElectricity().last!), date: Date.init())
                 enteredNumbers.text = ""
             }
             

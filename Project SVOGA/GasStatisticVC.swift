@@ -29,12 +29,12 @@ class GasStatisticVC: UIViewController {
             if gass.getGas().isEmpty == true {
                 let gas = DataGas(gasReadings: enterNum, costGasForOneM3: cost.getCostGas())
                 resultText.text = String(gas.resultForReading)
-                self.gass.saveGas(data: resultText.text!, amount: Float(0), date: Date.init())
+                self.gass.saveGas(data: String(enterNum), amount: Float(0), date: Date.init())
                 enteredNumbers.text = ""
             } else {
                 let gas = DataGas(gasReadings: enterNum , costGasForOneM3: cost.getCostGas())
                 resultText.text = String(gas.resultForReading)
-                self.gass.saveGas(data: resultText.text!, amount: Float(gas.resultForReading - gass.getGas().last!), date: Date.init())
+                self.gass.saveGas(data: String(enterNum), amount: Float(gas.gasReadings - gass.getGas().last!), date: Date.init())
                 enteredNumbers.text = ""
                 enteredNumbers.resignFirstResponder()
             }
