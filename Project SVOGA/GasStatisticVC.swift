@@ -16,10 +16,11 @@ class GasStatisticVC: UIViewController {
     
     @IBOutlet weak var resultText: UITextField!
     
+    @IBOutlet weak var labelCost: UILabel!
     
     @IBOutlet weak var enterCost: UITextField!
     override func viewWillAppear(_ animated: Bool) {
-        
+        labelCost.text = "Now= " + String(self.cost.getCostGas())
     }
     
     @IBAction func buttonPressed() {
@@ -29,10 +30,13 @@ class GasStatisticVC: UIViewController {
                 let gas = DataGas(gasReadings: enterNum, costGasForOneM3: cost.getCostGas())
                 resultText.text = String(gas.resultForReading)
                 self.gass.saveGas(data: resultText.text!, amount: Float(0), date: Date.init())
+                enteredNumbers.text = ""
             } else {
                 let gas = DataGas(gasReadings: enterNum , costGasForOneM3: cost.getCostGas())
                 resultText.text = String(gas.resultForReading)
                 self.gass.saveGas(data: resultText.text!, amount: Float(gas.resultForReading - gass.getGas().last!), date: Date.init())
+                enteredNumbers.text = ""
+                enteredNumbers.resignFirstResponder()
             }
             
         } else {
@@ -54,11 +58,16 @@ class GasStatisticVC: UIViewController {
     @IBAction func calc(_ sender: UIButton) {
         self.cost.saveCostGas(amount: Float(enterCost.text!) ?? 8.5)
         print(cost.saveCostGas(amount: Float (enterCost.text!) ?? 8.5))
+        enterCost.text = ""
+        enterCost.resignFirstResponder()
+        labelCost.text = "Now= " + String(self.cost.getCostGas())
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         enteredNumbers.keyboardType = UIKeyboardType.decimalPad
+        enterCost.keyboardType = UIKeyboardType.decimalPad
+       self.hideKeyboardWhenTappedAround()
         
     }
 }

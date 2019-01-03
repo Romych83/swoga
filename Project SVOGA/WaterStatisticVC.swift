@@ -22,10 +22,12 @@ class WaterStatisticVC: UIViewController {
                 let water = DataWater(waterReadings: enterNum, costWaterForOneM3: 8.5)
                 resultText.text = String(water.resultForReading)
                 self.waters.saveWater(data: resultText.text!, amount: Float(0), date: Date.init())
+                enteredNumbers.text = ""
             } else {
                 let water = DataWater(waterReadings: enterNum , costWaterForOneM3: 8.5)
                 resultText.text = String(water.resultForReading)
                 self.waters.saveWater(data: resultText.text!, amount: Float(water.resultForReading - waters.getWater().last!), date: Date.init())
+                enteredNumbers.text = ""
             }
         } else {
             resultText.text = "Enter valid data!"

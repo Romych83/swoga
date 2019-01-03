@@ -19,3 +19,4 @@ extension WaterStatistics {
         self.date = date
     }
 }
+

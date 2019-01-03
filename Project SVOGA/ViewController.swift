@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     
     func setupPieChart() {
         pieView.chartDescription?.text = "All Statistic"
-        pieView.drawHoleEnabled = false
+     //   pieView.drawHoleEnabled = false
 //        pieView.rotationEnabled = false
         gasDataChart.value = Double(calc(data: gasData.getGas()))
         gasDataChart.label = "Gas"
