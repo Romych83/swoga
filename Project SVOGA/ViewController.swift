@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setupPieChartInGRN()
-        
+        print("water",cost.getCostWater())
     }
     
     override func viewDidLoad() {
@@ -58,9 +58,9 @@ class ViewController: UIViewController {
     
     func setupPieChartInGRN() {
         pieView.chartDescription?.text = "All Statistic"
-        pieView.drawHoleEnabled = false
-        pieView.rotationEnabled = false
-        gasDataChart.value = Double(calc(data: gasData.getGas()) * cost.getCostGas())
+       // pieView.drawHoleEnabled = false
+       // pieView.rotationEnabled = false
+        gasDataChart.value = Double(calc(data: gasData.getGas()))
         gasDataChart.label = "Gas"
         waterDataChart.value = Double(calc(data: waterData.getWater()))
         waterDataChart.label = "Water"
@@ -78,9 +78,14 @@ class ViewController: UIViewController {
         chartDataSet.colors = colors
         pieView.data = chartData
     }
+    
     func calc(data:[Float]) -> Float {
         var result: Float = 0
+        if data.isEmpty == false {
         result = data.last! - data.first!
+        } else {
+            print("no data")
+        }
         return result
     }
     

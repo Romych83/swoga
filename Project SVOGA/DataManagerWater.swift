@@ -66,6 +66,7 @@ final class DataManagerWater {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
+    
     func DeleteAllDataWater() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext

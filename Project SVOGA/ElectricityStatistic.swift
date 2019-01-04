@@ -12,6 +12,7 @@ struct ElectricityStatistics {
     let electricity: Float
     let date: Date
 }
+
 extension ElectricityStatistics {
     init?(electricityDataModel: ElectricityDataModel) {
         guard let date = electricityDataModel.date else { return nil}

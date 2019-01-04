@@ -34,7 +34,7 @@ class GasVC: UIViewController, ChartViewDelegate {
             }
         } else {
             for i in pokaz.count - step.getStep() ..< pokaz.count {
-                print(pokaz)
+                //print(pokaz)
                 yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
             }
         }
@@ -74,6 +74,7 @@ class GasVC: UIViewController, ChartViewDelegate {
             break
         }
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print(gas.getGas())
         print(gas.getDate())

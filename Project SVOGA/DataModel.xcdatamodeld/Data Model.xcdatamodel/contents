@@ -3,9 +3,13 @@
     <entity name="ConfigDataModel" representedClassName="ConfigDataModel" syncable="YES" codeGenerationType="class">
         <attribute name="stepXChart" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="Cost" representedClassName="Cost" syncable="YES" codeGenerationType="class">
+    <entity name="CostElectricity" representedClassName="CostElectricity" syncable="YES" codeGenerationType="class">
         <attribute name="electricity" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="CostGas" representedClassName="CostGas" syncable="YES" codeGenerationType="class">
         <attribute name="gas" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="CostWater" representedClassName="CostWater" syncable="YES" codeGenerationType="class">
         <attribute name="water" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="ElectricityDataModel" representedClassName="ElectricityDataModel" syncable="YES" codeGenerationType="class">
@@ -25,9 +29,11 @@
     </entity>
     <elements>
         <element name="ConfigDataModel" positionX="-54" positionY="18" width="128" height="60"/>
+        <element name="CostGas" positionX="-54" positionY="27" width="128" height="60"/>
         <element name="ElectricityDataModel" positionX="-54" positionY="18" width="128" height="90"/>
         <element name="GasDataModel" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="WaterDataModel" positionX="-63" positionY="0" width="128" height="90"/>
-        <element name="Cost" positionX="-54" positionY="27" width="128" height="90"/>
+        <element name="CostElectricity" positionX="-54" positionY="27" width="128" height="60"/>
+        <element name="CostWater" positionX="-45" positionY="36" width="128" height="60"/>
     </elements>
 </model>

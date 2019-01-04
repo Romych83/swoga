@@ -68,6 +68,7 @@ class ElectricityVC: UIViewController, ChartViewDelegate {
             break
         }
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print(electricity.getElectricity())
         print(electricity.getDate())
