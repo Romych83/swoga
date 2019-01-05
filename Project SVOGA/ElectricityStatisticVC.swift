@@ -61,6 +61,11 @@ class ElectricityStatisticVC: UIViewController {
         present(alert, animated: true)
     }
     
+    
+    @IBAction func deleteLast() {
+        electricitys.deleteLastDataElectricity()
+    }
+    
     @IBAction func calc(_ sender: UIButton) {
         self.cost.saveCostElectricity(amount: Float(enterCost.text!) ?? 1.2)
        // print(cost.saveCostElectricity(amount: Float (enterCost.text!) ?? 1.2))

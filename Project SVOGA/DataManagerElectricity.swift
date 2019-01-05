@@ -77,4 +77,21 @@ final class DataManagerElectricity {
             print(error)
         }
     }
+    
+    func deleteLastDataElectricity() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let delLastRq = NSFetchRequest<NSFetchRequestResult>(entityName: "ElectricityDataModel")
+        if let result = try? context.fetch(delLastRq) {
+            for _ in result {
+                context.delete(result.last as! NSManagedObject)
+            }
+        }
+        do {
+            try managedContext.save()
+        }
+        catch {
+            print(error)
+        }
+    }
 }

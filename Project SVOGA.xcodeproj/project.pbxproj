@@ -83,9 +83,9 @@
 		3FA067E621D4EA15007A5DAE /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				C205A7F821B71589006A8AD4 /* DataManagerGas.swift */,
 				3F1273CF21DB85B6004F56A1 /* DataCost.swift */,
 				3F120C0A21D7541500A93A7B /* DataManagerConfig.swift */,
+				C205A7F821B71589006A8AD4 /* DataManagerGas.swift */,
 				3FA067E121D4E2A7007A5DAE /* DataManagerWater.swift */,
 				3FA067E321D4E429007A5DAE /* DataManagerElectricity.swift */,
 			);

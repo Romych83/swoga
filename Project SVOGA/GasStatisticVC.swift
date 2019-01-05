@@ -60,6 +60,9 @@ class GasStatisticVC: UIViewController {
         present(alert, animated: true)
     }
     
+    @IBAction func deleteLast() {
+        gass.deleteLastDataGas()
+    }
     @IBAction func calc(_ sender: UIButton) {
         self.cost.saveCostGas(amount: (Float(enterCost.text!) ?? 8.5))
         print(cost.saveCostGas(amount: Float (enterCost.text!) ?? 8.5))

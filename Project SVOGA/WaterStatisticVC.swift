@@ -23,6 +23,7 @@ class WaterStatisticVC: UIViewController {
         enteredNumbers.keyboardType = UIKeyboardType.decimalPad
         enterCost.keyboardType = UIKeyboardType.decimalPad
         self.hideKeyboardWhenTappedAround()
+        
     }
     
     @IBOutlet weak var enteredNumbers: UITextField!
@@ -58,7 +59,13 @@ class WaterStatisticVC: UIViewController {
         let canelActioin = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(okAction)
         alert.addAction(canelActioin)
-        present(alert, animated: true)    }
+        present(alert, animated: true)
+    }
+    
+    @IBAction func deleteLast() {
+        waters.deleteLastDataWater()
+    }
+    
     
     @IBAction func calc(_ sender: UIButton) {
         self.cost.saveCostWater(amount: (Float(enterCost.text!) ?? 10.092))

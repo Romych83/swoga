@@ -22,7 +22,7 @@ class GasVC: UIViewController, ChartViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+    
     }
     
     func setChartData(pokaz: [Float], date: [String]) {

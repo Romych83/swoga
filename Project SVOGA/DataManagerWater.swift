@@ -79,4 +79,20 @@ final class DataManagerWater {
         }
     }
     
+    func deleteLastDataWater() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let delLastRq = NSFetchRequest<NSFetchRequestResult>(entityName: "WaterDataModel")
+        if let result = try? context.fetch(delLastRq) {
+            for _ in result {
+                context.delete(result.last as! NSManagedObject)
+            }
+        }
+        do {
+            try managedContext.save()
+        }
+        catch {
+            print(error)
+        }
+    }
 }
