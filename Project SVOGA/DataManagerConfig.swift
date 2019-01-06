@@ -33,4 +33,5 @@ final class DataManagerConfig {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
+    
 }

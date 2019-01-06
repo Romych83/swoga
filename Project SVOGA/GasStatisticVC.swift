@@ -11,17 +11,25 @@ import UIKit
 class GasStatisticVC: UIViewController {
     let gass = DataManagerGas()
     let cost = DataCost()
+    let today = Date()
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         labelCost.text = "Now= " + String(self.cost.getCostGas())
+        if gass.getDate().last == today.shortString {
+            chekData()
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
        // labelCost.text = "Now= " + String(self.cost.getCostGas())
+        
         enteredNumbers.keyboardType = UIKeyboardType.decimalPad
         enterCost.keyboardType = UIKeyboardType.decimalPad
         self.hideKeyboardWhenTappedAround()
+        
     }
     
     @IBOutlet weak var enteredNumbers: UITextField!
@@ -61,14 +69,33 @@ class GasStatisticVC: UIViewController {
     }
     
     @IBAction func deleteLast() {
-        gass.deleteLastDataGas()
+        let alert = UIAlertController(title: "Attantion", message: "Delete last data?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.gass.deleteLastDataGas()
+        }
+        let canelActioin = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(canelActioin)
+        present(alert, animated: true)
     }
+    
     @IBAction func calc(_ sender: UIButton) {
         self.cost.saveCostGas(amount: (Float(enterCost.text!) ?? 8.5))
         print(cost.saveCostGas(amount: Float (enterCost.text!) ?? 8.5))
         enterCost.text = ""
         enterCost.resignFirstResponder()
         labelCost.text = "Now= " + String(self.cost.getCostGas())
+    }
+    
+    func chekData () {
+        let alert = UIAlertController(title: "Attantion", message: "Today Data allready exist", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Go back", style: .default) { (act) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        let canelActioin = UIAlertAction(title: "Continue", style: .cancel, handler: nil)
+        alert.addAction(canelActioin)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
 

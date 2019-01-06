@@ -651,7 +651,7 @@
         <!--GasVC-->
         <scene sceneID="VaC-k1-kqZ">
             <objects>
-                <viewController id="GzD-i3-yoy" customClass="GasVC" customModule="Project_SVOGA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GasVC" id="GzD-i3-yoy" customClass="GasVC" customModule="Project_SVOGA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eXj-mL-V6W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

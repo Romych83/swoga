@@ -11,9 +11,13 @@ import UIKit
 class ElectricityStatisticVC: UIViewController {
     let electricitys = DataManagerElectricity()
     let cost = DataCost()
+    let today = Date()
     
     override func viewWillAppear(_ animated: Bool) {
         labelCost.text = "Now= " + String(self.cost.getCostElectricity())
+        if electricitys.getDate().last == today.shortString {
+            chekData()
+        }
     }
     
     override func viewDidLoad() {
@@ -63,7 +67,15 @@ class ElectricityStatisticVC: UIViewController {
     
     
     @IBAction func deleteLast() {
-        electricitys.deleteLastDataElectricity()
+        let alert = UIAlertController(title: "Attantion", message: "Delete last data?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.electricitys.deleteLastDataElectricity()
+        }
+        let canelActioin = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(canelActioin)
+        present(alert, animated: true)
+        
     }
     
     @IBAction func calc(_ sender: UIButton) {
@@ -72,5 +84,16 @@ class ElectricityStatisticVC: UIViewController {
         enterCost.text = ""
         enterCost.resignFirstResponder()
         labelCost.text = "Now= " + String(self.cost.getCostElectricity())
+    }
+    
+    func chekData () {
+        let alert = UIAlertController(title: "Attantion", message: "Today Data allready exist", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Go back", style: .default) { (act) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        let canelActioin = UIAlertAction(title: "Continue", style: .cancel, handler: nil)
+        alert.addAction(canelActioin)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }

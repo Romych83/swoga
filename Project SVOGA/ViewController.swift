@@ -60,11 +60,11 @@ class ViewController: UIViewController {
         pieView.chartDescription?.text = "All Statistic"
        // pieView.drawHoleEnabled = false
        // pieView.rotationEnabled = false
-        gasDataChart.value = Double(calc(data: gasData.getGas()))
+        gasDataChart.value = Double(calc(data: gasData.getGas())) * Double(cost.getCostGas())
         gasDataChart.label = "Gas"
-        waterDataChart.value = Double(calc(data: waterData.getWater()))
+        waterDataChart.value = Double(calc(data: waterData.getWater())) * Double(cost.getCostWater())
         waterDataChart.label = "Water"
-        electricityDataChart.value = Double(calc(data: electricityData.getElectricity()))
+        electricityDataChart.value = Double(calc(data: electricityData.getElectricity())) * Double(cost.getCostElectricity())
         electricityDataChart.label = "Electricity"
         
         let allMoney = gasDataChart.value + waterDataChart.value + electricityDataChart.value

@@ -11,10 +11,14 @@ import UIKit
 class WaterStatisticVC: UIViewController {
     let waters = DataManagerWater()
     let cost = DataCost()
+    let today = Date()
+    
     
     override func viewWillAppear(_ animated: Bool) {
         labelCost.text = "Now= " + String(self.cost.getCostWater())
-        print(cost.getCostWater())
+        if waters.getDate().last == today.shortString {
+            chekData()
+        }
     }
     
     override func viewDidLoad() {
@@ -63,7 +67,15 @@ class WaterStatisticVC: UIViewController {
     }
     
     @IBAction func deleteLast() {
-        waters.deleteLastDataWater()
+        
+        let alert = UIAlertController(title: "Attantion", message: "Delete last data?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.waters.deleteLastDataWater()
+        }
+        let canelActioin = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(canelActioin)
+        present(alert, animated: true)
     }
     
     
@@ -74,6 +86,17 @@ class WaterStatisticVC: UIViewController {
         enterCost.resignFirstResponder()
         labelCost.text = "Now= " + String(self.cost.getCostWater())
         
+    }
+    
+    func chekData () {
+        let alert = UIAlertController(title: "Attantion", message: "Today Data allready exist", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Go back", style: .default) { (act) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        let canelActioin = UIAlertAction(title: "Continue", style: .cancel, handler: nil)
+        alert.addAction(canelActioin)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
 
