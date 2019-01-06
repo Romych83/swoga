@@ -58,6 +58,9 @@ class ViewController: UIViewController {
     
     func setupPieChartInGRN() {
         pieView.chartDescription?.text = "All Statistic"
+        pieView.animate(xAxisDuration: 4, yAxisDuration: 4, easingOption: .easeInOutBack)
+        
+        
        // pieView.drawHoleEnabled = false
        // pieView.rotationEnabled = false
         gasDataChart.value = Double(calc(data: gasData.getGas())) * Double(cost.getCostGas())

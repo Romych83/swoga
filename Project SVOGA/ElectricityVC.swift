@@ -23,6 +23,7 @@ class ElectricityVC: UIViewController, ChartViewDelegate {
     
     func setChartData(pokaz: [Float], date: [String]) {
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
+        lineChartView.animate(xAxisDuration: 0.5, yAxisDuration: 2)
         lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:date)
         if pokaz.count < step.getStep() {
             for i in 0 ..< pokaz.count {

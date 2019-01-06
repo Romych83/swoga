@@ -28,6 +28,7 @@ class GasVC: UIViewController, ChartViewDelegate {
     func setChartData(pokaz: [Float], date: [String]) {
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:date)
+        lineChartView.animate(xAxisDuration: 0.5, yAxisDuration: 2)
         if pokaz.count < step.getStep() {
             for i in 0 ..< pokaz.count {
                 yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
@@ -40,6 +41,7 @@ class GasVC: UIViewController, ChartViewDelegate {
         }
         
         let set1 = LineChartDataSet(values: yVals1, label: "Gas")
+        
         set1.lineDashLengths = [5, 2.5]
         set1.highlightLineDashLengths = [5, 2.5]
         set1.setColor(.red)

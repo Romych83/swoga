@@ -13,6 +13,7 @@ class ConfigVC: UIViewController {
     var step = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         print(step)
     }
    
