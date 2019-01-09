@@ -22,6 +22,10 @@
         <attribute name="gas" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="gasAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="NotifyDate" representedClassName="NotifyDate" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="switchOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <entity name="WaterDataModel" representedClassName="WaterDataModel" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="water" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -29,11 +33,12 @@
     </entity>
     <elements>
         <element name="ConfigDataModel" positionX="-54" positionY="18" width="128" height="60"/>
+        <element name="CostElectricity" positionX="-54" positionY="27" width="128" height="60"/>
         <element name="CostGas" positionX="-54" positionY="27" width="128" height="60"/>
+        <element name="CostWater" positionX="-45" positionY="36" width="128" height="60"/>
         <element name="ElectricityDataModel" positionX="-54" positionY="18" width="128" height="90"/>
         <element name="GasDataModel" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="WaterDataModel" positionX="-63" positionY="0" width="128" height="90"/>
-        <element name="CostElectricity" positionX="-54" positionY="27" width="128" height="60"/>
-        <element name="CostWater" positionX="-45" positionY="36" width="128" height="60"/>
+        <element name="NotifyDate" positionX="-54" positionY="27" width="128" height="75"/>
     </elements>
 </model>

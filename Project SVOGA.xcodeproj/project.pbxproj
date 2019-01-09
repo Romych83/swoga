@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		3F120C0B21D7541500A93A7B /* DataManagerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F120C0A21D7541500A93A7B /* DataManagerConfig.swift */; };
 		3F1273D021DB85B6004F56A1 /* DataCost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1273CF21DB85B6004F56A1 /* DataCost.swift */; };
+		3F13571121E627FD00B41242 /* DataNotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13571021E627FD00B41242 /* DataNotify.swift */; };
 		3FA067E221D4E2A7007A5DAE /* DataManagerWater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA067E121D4E2A7007A5DAE /* DataManagerWater.swift */; };
 		3FA067E421D4E429007A5DAE /* DataManagerElectricity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA067E321D4E429007A5DAE /* DataManagerElectricity.swift */; };
+		3FC988CC21E35FED002F106D /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC988CB21E35FED002F106D /* LocalNotificationHelper.swift */; };
 		AFF456550F6430792FD91031 /* libPods-Project SVOGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59DD272F7380F906C70F11C7 /* libPods-Project SVOGA.a */; };
 		C205A7F421B7092E006A8AD4 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F321B7092E006A8AD4 /* DateExtensions.swift */; };
 		C205A7F721B709F9006A8AD4 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C205A7F521B709F9006A8AD4 /* DataModel.xcdatamodeld */; };
@@ -39,8 +41,10 @@
 		000D0CE7647F1522237E572C /* Pods-Project SVOGA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project SVOGA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project SVOGA/Pods-Project SVOGA.debug.xcconfig"; sourceTree = "<group>"; };
 		3F120C0A21D7541500A93A7B /* DataManagerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerConfig.swift; sourceTree = "<group>"; };
 		3F1273CF21DB85B6004F56A1 /* DataCost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCost.swift; sourceTree = "<group>"; };
+		3F13571021E627FD00B41242 /* DataNotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNotify.swift; sourceTree = "<group>"; };
 		3FA067E121D4E2A7007A5DAE /* DataManagerWater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerWater.swift; sourceTree = "<group>"; };
 		3FA067E321D4E429007A5DAE /* DataManagerElectricity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerElectricity.swift; sourceTree = "<group>"; };
+		3FC988CB21E35FED002F106D /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 		59DD272F7380F906C70F11C7 /* libPods-Project SVOGA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project SVOGA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EEE65DF56C7E74120E8E709 /* Pods-Project SVOGA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project SVOGA.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project SVOGA/Pods-Project SVOGA.release.xcconfig"; sourceTree = "<group>"; };
 		C205A7F321B7092E006A8AD4 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				3F1273CF21DB85B6004F56A1 /* DataCost.swift */,
+				3F13571021E627FD00B41242 /* DataNotify.swift */,
 				3F120C0A21D7541500A93A7B /* DataManagerConfig.swift */,
 				C205A7F821B71589006A8AD4 /* DataManagerGas.swift */,
 				3FA067E121D4E2A7007A5DAE /* DataManagerWater.swift */,
@@ -166,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				C29F601F21B2F33D00C4F58B /* AppDelegate.swift */,
+				3FC988CB21E35FED002F106D /* LocalNotificationHelper.swift */,
 				C29F602321B2F33D00C4F58B /* Main.storyboard */,
 				C205A7F521B709F9006A8AD4 /* DataModel.xcdatamodeld */,
 				C20AD64E21B7BF380023DE3D /* DATA */,
@@ -300,6 +306,7 @@
 				3FA067E221D4E2A7007A5DAE /* DataManagerWater.swift in Sources */,
 				C2517E1021B563B60016B72E /* DataGas.swift in Sources */,
 				C23191BA21B2FC58007C6A68 /* GasStatisticVC.swift in Sources */,
+				3F13571121E627FD00B41242 /* DataNotify.swift in Sources */,
 				C20DB08121B6FE9C00F871B4 /* ElectricityStatistic.swift in Sources */,
 				C205A7F421B7092E006A8AD4 /* DateExtensions.swift in Sources */,
 				C23191B421B2FBA3007C6A68 /* GasVC.swift in Sources */,
@@ -307,6 +314,7 @@
 				C20DB07D21B6EBAC00F871B4 /* GasStatistics.swift in Sources */,
 				C23191B021B2FB85007C6A68 /* ElectricityVC.swift in Sources */,
 				C29F602021B2F33D00C4F58B /* AppDelegate.swift in Sources */,
+				3FC988CC21E35FED002F106D /* LocalNotificationHelper.swift in Sources */,
 				C23191B621B2FBCA007C6A68 /* ElectricityStatisticVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

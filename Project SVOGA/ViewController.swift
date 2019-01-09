@@ -9,9 +9,10 @@
 import UIKit
 import Charts
 class ViewController: UIViewController {
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
+    @IBOutlet weak var allLabel: UILabel!
     @IBOutlet weak var pieView: PieChartView!
-    
     let gasData = DataManagerGas()
     let cost = DataCost()
     let waterData = DataManagerWater()
@@ -24,13 +25,14 @@ class ViewController: UIViewController {
     var masiveData = [PieChartDataEntry]()
     
     override func viewWillAppear(_ animated: Bool) {
-        setupPieChartInGRN()
+        allLabel.text = String(setupPieChartInGRN()) + " " + "GRN"
         print("water",cost.getCostWater())
+        appDelegate?.scheduleNotification()
+        
     }
     
     override func viewDidLoad() {
-        
-        
+       
     }
     
 //    func setupPieChart() {
@@ -56,7 +58,7 @@ class ViewController: UIViewController {
 //        pieView.data = chartData
 //    }
     
-    func setupPieChartInGRN() {
+    func setupPieChartInGRN() -> Int {
         pieView.chartDescription?.text = "All Statistic"
         pieView.animate(xAxisDuration: 4, yAxisDuration: 4, easingOption: .easeInOutBack)
         
@@ -70,7 +72,7 @@ class ViewController: UIViewController {
         electricityDataChart.value = Double(calc(data: electricityData.getElectricity())) * Double(cost.getCostElectricity())
         electricityDataChart.label = "Electricity"
         
-        let allMoney = gasDataChart.value + waterDataChart.value + electricityDataChart.value
+        let allMoney = Int(gasDataChart.value + waterDataChart.value + electricityDataChart.value)
         print(allMoney)
         masiveData = [gasDataChart, waterDataChart, electricityDataChart]
         let chartDataSet = PieChartDataSet(values: masiveData, label: nil)
@@ -80,6 +82,7 @@ class ViewController: UIViewController {
                       UIColor.blue]
         chartDataSet.colors = colors
         pieView.data = chartData
+        return allMoney
     }
     
     func calc(data:[Float]) -> Float {
@@ -91,6 +94,7 @@ class ViewController: UIViewController {
         }
         return result
     }
+    
     
 }
 
