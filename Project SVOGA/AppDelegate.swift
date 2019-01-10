@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         self.saveContext()
     }
+    
     // MARK: - Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {
@@ -46,35 +47,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-       
         return true
     }
     
     func scheduleNotification() {
-        
         let content = UNMutableNotificationContent()
-        
         content.title = "Hello"
         content.body = "Do you want to add new data?"
-        
-        
         content.sound = UNNotificationSound.criticalSoundNamed("some.caf")
-        
         content.badge = 1
         let dateFormater = DateFormatter()
         dateFormater.dateFormat = "dd"
         let todayStr = dateFormater.string(from: Date())
-        // print(Date())
-        // print("day = \(todayStr)")
         dateFormater.dateFormat = "dd H:mm"
         print(todayStr)
         let fullDate = "\(todayStr) \(notifyDate.getNotifyDate())"
         let date = dateFormater.date(from: fullDate)
-        
         let triggerDate = Calendar.current.dateComponents([.hour,.minute], from: date ?? Date.init())
-        //print(triggerDate)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: true)
-        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let identifier = "Local Notification"
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         notificationCenter.add(request) { (error) in

@@ -16,6 +16,7 @@ class WaterVC: UIViewController, ChartViewDelegate {
     let step = DataManagerConfig()
     
       override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
         setChartData(pokaz: water.getWaterAmount(), date: water.getDate())
     }
     

@@ -21,12 +21,11 @@ class ConfigVC: UIViewController {
     @IBOutlet weak var notificationSwitch: UISwitch!
     
     override func viewWillAppear(_ animated: Bool) {
-       //toggleNotification()
-        //datePicker.isHidden = notifyDate.getNotifySwitch()
+        super.viewWillAppear(animated)
         print("dfsdf", notifyDate.getNotifyDate())
         let dateFormater = DateFormatter()
         dateFormater.dateFormat = "H:mm"
-      notificationSwitch.isOn = notifyDate.getNotifySwitch()
+        notificationSwitch.isOn = notifyDate.getNotifySwitch()
         print(notifyDate.getNotifySwitch())
         datePicker.date = dateFormater.date(from: notifyDate.getNotifyDate()) ?? Date.init()
         appDelegate?.scheduleNotification()
@@ -42,23 +41,23 @@ class ConfigVC: UIViewController {
         
         
     }
-   
+    
     @IBAction func stepper(_ sender: UIStepper) {
         var step = Int()
         step = Int(sender.value)
         self.step = step
-       confStep.saveStep(data: step)
-       print("ew", step)
+        confStep.saveStep(data: step)
+        print("ew", step)
         stepLabel.text = String(step)
         stepLabel.resignFirstResponder()
     }
-
+    
     func toggleNotification()  {
         if notificationSwitch.isOn {
             datePicker.isHidden = false
             let dateFormater = DateFormatter()
             dateFormater.dateFormat = "H:mm"
-           let todayStr = dateFormater.string(from:datePicker.date)
+            let todayStr = dateFormater.string(from:datePicker.date)
             print(todayStr)
             notifyDate.saveNotifyData(data: todayStr, switchPos: false)
         } else {

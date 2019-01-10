@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     var masiveData = [PieChartDataEntry]()
     
     override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
         allLabel.text = String(setupPieChartInGRN()) + " " + "GRN"
         print("water",cost.getCostWater())
         appDelegate?.scheduleNotification()
