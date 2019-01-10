@@ -15,7 +15,6 @@ final class DataManagerElectricity {
     lazy var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func getElectricity() -> [Float] {
-        
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "ElectricityDataModel")
         //userFetch.fetchLimit = 5
         let request = try! context.fetch(userFetch)
@@ -58,7 +57,6 @@ final class DataManagerElectricity {
         electricityRead.setValue(Float(data), forKeyPath: "electricity")
         electricityRead.setValue(date, forKeyPath: "date")
         electricityRead.setValue(amount, forKey: "electricityAmount")
-        
         do {
             try context.save()
         } catch let error as NSError {

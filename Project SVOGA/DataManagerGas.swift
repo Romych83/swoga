@@ -55,7 +55,6 @@ final class DataManagerGas {
         gasRead.setValue(Float(data), forKeyPath: "gas")
         gasRead.setValue(date, forKeyPath: "date")
         gasRead.setValue(amount, forKey: "gasAmount")
-        
         do {
             try context.save()
         } catch let error as NSError {

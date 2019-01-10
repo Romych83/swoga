@@ -18,7 +18,6 @@ final class DataCost {
         let gasEntity = NSEntityDescription.entity(forEntityName: "CostGas", in: context)!
         let gasRead = NSManagedObject(entity: gasEntity, insertInto: context)
         gasRead.setValue(amount, forKeyPath: "gas")
-
         do {
             try context.save()
         } catch let error as NSError {
@@ -40,7 +39,6 @@ final class DataCost {
         let waterEntity = NSEntityDescription.entity(forEntityName: "CostWater", in: context)!
         let waterRead = NSManagedObject(entity: waterEntity, insertInto: context)
         waterRead.setValue(amount, forKeyPath: "water")
-        
         do {
             try context.save()
         } catch let error as NSError {
@@ -51,18 +49,17 @@ final class DataCost {
     func getCostWater() -> Float {
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "CostWater")
         let request = try! context.fetch(userFetch)
-        var masive = Float()
+        var result = Float()
         for data in request as! [NSManagedObject] {
-            masive = (data.value(forKey: "water") as! Float)
+            result = (data.value(forKey: "water") as! Float)
         }
-        return masive
+        return result
     }
     
     func saveCostElectricity(amount: Float) {
         let electricityEntity = NSEntityDescription.entity(forEntityName: "CostElectricity", in: context)!
         let electricityRead = NSManagedObject(entity: electricityEntity, insertInto: context)
         electricityRead.setValue(amount, forKeyPath: "electricity")
-        
         do {
             try context.save()
         } catch let error as NSError {
@@ -73,10 +70,10 @@ final class DataCost {
     func getCostElectricity() -> Float {
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "CostElectricity")
         let request = try! context.fetch(userFetch)
-        var masive = Float()
+        var result = Float()
         for data in request as! [NSManagedObject] {
-            masive = (data.value(forKey: "electricity") as! Float)
+            result = (data.value(forKey: "electricity") as! Float)
         }
-        return masive
+        return result
     }
 }

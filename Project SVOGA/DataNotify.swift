@@ -12,6 +12,7 @@ import CoreData
 
 final class DataNotify {
     lazy var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     func saveNotifyData(data: String, switchPos: Bool) {
         let notifyEntity = NSEntityDescription.entity(forEntityName: "NotifyDate", in: context)!
         let notifyRead = NSManagedObject(entity: notifyEntity, insertInto: context)
@@ -27,21 +28,21 @@ final class DataNotify {
     func getNotifyDate() -> String {
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "NotifyDate")
         let request = try! context.fetch(userFetch)
-        var masive = String()
+        var result = String()
         for data in request as! [NSManagedObject] {
-            masive = (data.value(forKey: "date") as! String)
+            result = (data.value(forKey: "date") as! String)
         }
-        return masive
+        return result
     }
     
     func getNotifySwitch() -> Bool {
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "NotifyDate")
         let request = try! context.fetch(userFetch)
-        var masive = Bool()
+        var result = Bool()
         for data in request as! [NSManagedObject] {
-            masive = (data.value(forKeyPath: "switchOn") != nil)
+            result = (data.value(forKeyPath: "switchOn") != nil)
         }
-        return masive
+        return result
     }
     
 }

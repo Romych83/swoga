@@ -15,7 +15,6 @@ final class DataManagerWater {
     lazy var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func getWater() -> [Float] {
-        
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "WaterDataModel")
         //userFetch.fetchLimit = 5
         let request = try! context.fetch(userFetch)
@@ -47,7 +46,6 @@ final class DataManagerWater {
             let someData = data.value(forKey: "date") as! Date
             masive.append(someData.shortString)
         }
-        
         let newMasive = masive
         masive = Array(newMasive)
         return masive
@@ -59,7 +57,6 @@ final class DataManagerWater {
         waterRead.setValue(Float(data), forKeyPath: "water")
         waterRead.setValue(date, forKeyPath: "date")
         waterRead.setValue(amount, forKey: "waterAmount")
-        
         do {
             try context.save()
         } catch let error as NSError {

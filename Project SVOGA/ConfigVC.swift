@@ -14,6 +14,8 @@ class ConfigVC: UIViewController {
     var step = 0
     let notifyDate = DataNotify()
     
+    @IBOutlet weak var stepLabel: UILabel!
+    
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var notificationSwitch: UISwitch!
@@ -28,26 +30,29 @@ class ConfigVC: UIViewController {
         print(notifyDate.getNotifySwitch())
         datePicker.date = dateFormater.date(from: notifyDate.getNotifyDate()) ?? Date.init()
         appDelegate?.scheduleNotification()
+        stepLabel.text = String(confStep.getStep())
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let dateFormater = DateFormatter()
         dateFormater.dateFormat = "H:mm"
-        
-        
         print(step)
+        print(confStep.getStep())
+        
+        
     }
    
     @IBAction func stepper(_ sender: UIStepper) {
-        var step = 5
+        var step = Int()
         step = Int(sender.value)
         self.step = step
        confStep.saveStep(data: step)
+       print("ew", step)
+        stepLabel.text = String(step)
+        stepLabel.resignFirstResponder()
     }
-    
-   
-    
+
     func toggleNotification()  {
         if notificationSwitch.isOn {
             datePicker.isHidden = false
@@ -56,8 +61,6 @@ class ConfigVC: UIViewController {
            let todayStr = dateFormater.string(from:datePicker.date)
             print(todayStr)
             notifyDate.saveNotifyData(data: todayStr, switchPos: false)
-           
-            
         } else {
             notificationSwitch.isOn = false
             datePicker.isHidden = true
@@ -68,7 +71,6 @@ class ConfigVC: UIViewController {
             notifyDate.saveNotifyData(data: todayStr, switchPos: false)
             print(notifyDate.getNotifySwitch())
         }
-    
     }
     
     @IBAction func toggleSwitch(_ sender: UISwitch) {
@@ -77,7 +79,4 @@ class ConfigVC: UIViewController {
     @IBAction func dateChanged(_ sender: UIDatePicker) {
         toggleNotification()
     }
-    
-    
-    
 }
