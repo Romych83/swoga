@@ -41,7 +41,7 @@ class ElectricityVC: UIViewController, ChartViewDelegate {
         set1.lineWidth = 1
         set1.circleRadius = 3
         set1.drawCircleHoleEnabled = false
-        set1.valueFont = .systemFont(ofSize: 9)
+        set1.valueFont = .systemFont(ofSize: 12)
         set1.formLineDashLengths = [5, 2.5]
         set1.formLineWidth = 1
         set1.formSize = 15

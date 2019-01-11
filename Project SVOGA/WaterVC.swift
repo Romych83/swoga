@@ -24,6 +24,7 @@ class WaterVC: UIViewController, ChartViewDelegate {
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:date)
         lineChartView.animate(xAxisDuration: 0.5, yAxisDuration: 2)
+         lineChartView.backgroundColor = UIColor(displayP3Red: 139/255, green: 203/255, blue: 253/255, alpha: 0.2)
         if pokaz.count < step.getStep() {
             for i in 0 ..< pokaz.count {
                 yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
@@ -42,7 +43,7 @@ class WaterVC: UIViewController, ChartViewDelegate {
         set1.lineWidth = 1
         set1.circleRadius = 3
         set1.drawCircleHoleEnabled = false
-        set1.valueFont = .systemFont(ofSize: 9)
+        set1.valueFont = .systemFont(ofSize: 12)
         set1.formLineDashLengths = [5, 2.5]
         set1.formLineWidth = 1
         set1.formSize = 15

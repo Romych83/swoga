@@ -13,8 +13,6 @@ class GasStatisticVC: UIViewController {
     let cost = DataCost()
     let today = Date()
     
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         labelCost.text = "Now= " + String(self.cost.getCostGas())
         if gass.getDate().last == today.shortString {
@@ -24,12 +22,9 @@ class GasStatisticVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // labelCost.text = "Now= " + String(self.cost.getCostGas())
-        
         enteredNumbers.keyboardType = UIKeyboardType.decimalPad
         enterCost.keyboardType = UIKeyboardType.decimalPad
-        self.hideKeyboardWhenTappedAround()
-        
+        hideKeyboardWhenTappedAround()
     }
     
     @IBOutlet weak var enteredNumbers: UITextField!

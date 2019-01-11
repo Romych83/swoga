@@ -29,6 +29,7 @@ class GasVC: UIViewController, ChartViewDelegate {
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:date)
         lineChartView.animate(xAxisDuration: 0.5, yAxisDuration: 2)
+        lineChartView.backgroundColor = UIColor(displayP3Red: 220/255, green: 33/255, blue: 44/255, alpha: 0.1)
         if pokaz.count < step.getStep() {
             for i in 0 ..< pokaz.count {
                 yVals1.append(ChartDataEntry(x: Double(i), y: Double(pokaz[i])))
@@ -44,12 +45,12 @@ class GasVC: UIViewController, ChartViewDelegate {
         
         set1.lineDashLengths = [5, 2.5]
         set1.highlightLineDashLengths = [5, 2.5]
-        set1.setColor(.red)
+        set1.setColor(.blue)
         set1.setCircleColor(.green)
         set1.lineWidth = 1
         set1.circleRadius = 3
         set1.drawCircleHoleEnabled = false
-        set1.valueFont = .systemFont(ofSize: 9)
+        set1.valueFont = .systemFont(ofSize: 12)
         set1.formLineDashLengths = [5, 2.5]
         set1.formLineWidth = 1
         set1.formSize = 15
